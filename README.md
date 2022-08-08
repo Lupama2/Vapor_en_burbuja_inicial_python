@@ -6,9 +6,10 @@ El proceso que se busca simular trata de las reacciones químicas en el vapor en
 
 Suposiciones:
 1. Se está suponiendo que en la cavidad está todo bien mezclado, de manera que todas las moléculas pueden interactuar con todas las demás.
-
-
-
+2. El radio de la burbuja evoluciona de forma lineal
+3. La temperatura evoluciona como una gaussiana
+4. Se considera que inicialmente sólo hay H20, H2 y 02.
+5. Las reacciones consideradas son todas aquellas que no involucran N (nitrógeno). Además, las que involucran M (catalizador) serán tenidas en cuenta sin el mismo.
 
 Para resolver el sistema de ecuaciones diferenciales se emplea la función scipy.integrate.solve_ivp (https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html) de la librería scipy, que se basa en el método rk45 (método de Runge-Kutta-Fehlberg) explicado en detalle en Numerical_Recipes
 
