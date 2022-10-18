@@ -1,0 +1,203 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6271,        195]
+NotebookOptionsPosition[      5367,        166]
+NotebookOutlinePosition[      5742,        182]
+CellTagsIndexPosition[      5699,        179]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Reproducci\[OAcute]n de cuentas del paper de Bunkin \
+\[OpenCurlyDoubleQuote]The New Concepts in the Optical Breakdown of \
+Transparent Liquids\[CloseCurlyDoubleQuote]", "Chapter"]], "Text",
+ CellChangeTimes->{{3.875093292209076*^9, 3.875093314960786*^9}, {
+  3.8750954380023675`*^9, 
+  3.875095438566082*^9}},ExpressionUUID->"9844fb4e-f24b-4ee9-bed4-\
+c3a5c52d75d5"],
+
+Cell[CellGroupData[{
+
+Cell["2.1. Electron Avalanche Development inside the Bubstons", "Subchapter",
+ CellChangeTimes->{{3.8750954701766243`*^9, 
+  3.875095490443647*^9}},ExpressionUUID->"b19ed1da-ce5f-40c5-9d29-\
+9c37aa2e1953"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Defino", " ", "par\[AAcute]metros"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SubscriptBox["R", "0"], " ", "=", " ", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "6"}]]}], ";"}], " ", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Radio", " ", "inicial", " ", "del", " ", "bubston", " ", "en", " ", 
+     "cm"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Nu]", "ew"], "="}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     OverscriptBox[
+      SubscriptBox["\[Nu]", "e"], "_"], " ", "="}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Nu]", "i"], "="}], " ", ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[ScriptCapitalE]", "e"], " ", "="}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     OverscriptBox[
+      SubscriptBox["\[ScriptCapitalE]", "e"], "_"], " ", "="}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     OverscriptBox[
+      SubscriptBox["\[ScriptCapitalE]", "e"], "."], "="}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[ScriptCapitalE]", "vib"], "="}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[CapitalDelta]", "="}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"e", " ", "="}], " ", ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["E", "0"], "="}], " ", ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"m", " ", "="}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Omega]", " ", "="}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["n", 
+      RowBox[{"e", " ", "cr"}]], "="}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"c", " ", "="}], " ", ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[ScriptCapitalI]", " ", "=", " ", 
+     RowBox[{
+      FractionBox["c", 
+       RowBox[{"8", " ", "Pi"}]], 
+      SuperscriptBox[
+       SubscriptBox["E", "0"], "2"]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Omega]", 
+      RowBox[{"a", ",", "e"}]], "="}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["N", "e"], "="}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Theta]", " ", "="}], " ", ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[ScriptCapitalI]", "0"], " ", "="}], " ", ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[CapitalDelta]\[Omega]", 
+      RowBox[{"a", ",", "e"}]], "="}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[ScriptF]", "="}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["T", "e"], "="}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Q", " ", "="}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["n", "e"], "="}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     OverscriptBox[
+      SubscriptBox["n", "e"], "_"], "="}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["a", "e"], "="}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.875095453674734*^9, 3.8750954549546394`*^9}, {
+  3.8750954948146963`*^9, 3.8750955927212224`*^9}, {3.8750956329360547`*^9, 
+  3.8750957105398397`*^9}, {3.8750957734915876`*^9, 3.8750957737593184`*^9}, {
+  3.8750958237727985`*^9, 3.875096133884026*^9}, {3.8750961669220486`*^9, 
+  3.875096276398598*^9}},ExpressionUUID->"0332c86f-9689-4ac4-a17d-\
+5b988e2d6b0e"],
+
+Cell[BoxData[
+ FractionBox["1000001", "1000000"]], "Print",
+ CellChangeTimes->{{3.8750955658675528`*^9, 
+  3.87509557007483*^9}},ExpressionUUID->"5176e36c-7d62-40e0-8794-\
+78526a108cb5"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.87509326866293*^9, 
+  3.8750932749385815`*^9}},ExpressionUUID->"5148cf95-df99-436c-b37f-\
+86444b6a469e"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.875096022154641*^9, 
+  3.875096041939739*^9}},ExpressionUUID->"bb74c2c6-1f0b-4ddc-a400-\
+b01e5d3ceaca"]
+}, Open  ]]
+},
+WindowSize->{1920, 989},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>1.2 Inherited,
+FrontEndVersion->"11.1 para Microsoft Windows (64-bit) (March 13, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 391, 6, 137, "Text", "ExpressionUUID" -> \
+"9844fb4e-f24b-4ee9-bed4-c3a5c52d75d5"],
+Cell[CellGroupData[{
+Cell[974, 30, 205, 3, 81, "Subchapter", "ExpressionUUID" -> \
+"b19ed1da-ce5f-40c5-9d29-9c37aa2e1953"],
+Cell[CellGroupData[{
+Cell[1204, 37, 3635, 109, 760, "Input", "ExpressionUUID" -> \
+"0332c86f-9689-4ac4-a17d-5b988e2d6b0e"],
+Cell[4842, 148, 186, 4, 44, "Print", "ExpressionUUID" -> \
+"5176e36c-7d62-40e0-8794-78526a108cb5"]
+}, Open  ]],
+Cell[5043, 155, 153, 3, 37, "Input", "ExpressionUUID" -> \
+"5148cf95-df99-436c-b37f-86444b6a469e"],
+Cell[5199, 160, 152, 3, 37, "Input", "ExpressionUUID" -> \
+"bb74c2c6-1f0b-4ddc-a400-b01e5d3ceaca"]
+}, Open  ]]
+}
+]
+*)
+
