@@ -136,7 +136,7 @@ We acknowledge advice from Jessie Zhang and Harry Pirie to produce Fig.\ \ref{fi
 \begin{document}
 
 % Allows to rewrite the same title in the supplement
-\newcommand{\mytitle}{\textcolor{red}{TESIS - trabajo realizado hasta 27 de Octubre de 2022}}
+\newcommand{\mytitle}{\textcolor{red}{Cálculos Computacionales en Plasmas Producidos por Cavitación Láser y colapso de burbujas - trabajo realizado hasta 27 de Octubre de 2022}}
 
 \title{\mytitle}
 
@@ -147,11 +147,11 @@ We acknowledge advice from Jessie Zhang and Harry Pirie to produce Fig.\ \ref{fi
 
 \begin{abstract}
   \begin{itemize}
-    \item Se estudió numéricamente la expansión de una burbuja de cavitación producida mediante un láser
+    \item Se estudió numéricamente la expansión de una burbuja de cavitación láser. \textcolor{red}{y la compresión}
     \item La evolución temporal se divide en dos partes, cada una de ellas gobernada por fenómenos físicos distintos.
     \item La primera consta desde la creación de la burbuja hasta la expansión rápida al radio máximo. El fenómeno que creemos ocurre es la interacción del láser con los electrones de burbujas microscópicas (bubston) para dar lugar a una avalancha de electrones impulsora de la expansión (fenómeno electromagnético y fluidodinámico). El fenómeno se debe principalmente a la acción de los electrones y las moléculas ionizadas que rodean exteriormente la burbuja.
-    \item La segunda, desde el radio máximo hasta su implosión al radio mínimo. En este momento el efecto de los electrones se diluye y comienzan a preponderar efectos de conducción del calor, cambios en la masa contenida dentro de la esfera debido a reacciones químicas, difusión y condensación, entre otros. El fenómeno se debe principalmente a la acción de los iones y moléculas dentro y fuera de la burbuja (fenómeno fluidodinámico, termodinámico y químico).
-    \item Se exploraron además distintos métodos numéricos para resolver este problema complejo que inherentemente es del tipo stiff debido a las diferencias de órdenes de magnitud entre las constantes de tiempo involucradas.
+    \item La segunda, desde el radio máximo hasta su implosión al radio mínimo. En este momento el efecto de los electrones se diluye y comienzan a preponderar efectos de conducción del calor, cambios en la masa contenida dentro de la esfera debido a reacciones químicas, difusión y condensación/evaporación, entre otros. El fenómeno se debe principalmente a la acción de los iones y moléculas dentro y fuera de la burbuja (fenómeno fluidodinámico, termodinámico y químico).
+    \item Se exploraron además distintos métodos numéricos y técnicas de resolución computacionales para resolver este problema complejo que inherentemente es del tipo stiff debido a las diferencias de órdenes de magnitud entre las constantes de tiempo involucradas.
   \end{itemize}
 
 
@@ -164,9 +164,140 @@ We acknowledge advice from Jessie Zhang and Harry Pirie to produce Fig.\ \ref{fi
 
 \section*{Introducción}
 
-\section*{Capítulo I:}
+Reacciones químicas
+Gabriela obtuvo el modelo de reacciones qcas del paper de Toegel Phase diagrams for sonoluminescing bubbles: A comparison between experiment and theory. En este se desarrolla el modelo hidrondinámico de la burbuja, junto tmb a modelos de transferencia de calor. En cuanto a las reacciones químicas en particular, el modelo no es exactamente el de la ecuación de Arrhenius, sino de la "ley de Arrhenius modificada". En teoría esto se explica en mayor detalle en el libro "Gas-Phase Combustion Chemistry" de W. C. Gardiner pero no me puse a buscarlo
 
-\section*{Capítulo II:}
+
+\section*{Capítulo I: Evolución hasta el radio máximo}
+
+\ptitle{Resumen del capítulo}
+
+\subsection{}
+
+\subsection{Avalancha de electrones dentro de los bubston}
+
+\begin{itemize}
+  \item Resumen cualitativo
+  \item Determinación instantánea de la densidad de electrones y el potencial eléctrico
+  \item Determinación del campo eléctrico
+  \item Determinación de la presión eléctrica en la superficie de la burbuja ($p_{gas}$ + $p_{coulomb}$)
+  \item 
+\end{itemize}
+
+
+
+\subsection{Coalescencia de los bubston y formación del núcleo}
+
+\begin{itemize}
+  \item 
+\end{itemize}
+
+
+\section{Evolución de la burbuja}
+
+\begin{itemize}
+  \item Ecuación diferencial para $R(t)$ (\textcolor{red}{la aproximada o la de Gabriela más completa?})
+  \item Referencia a la expresión de la presión eléctrica
+  \item Gráfico de R(t)
+  \item 
+\end{itemize}
+
+
+
+
+
+
+
+
+\section*{Capítulo II: Evolución desde el radio máximo}
+
+\subsection{Resumen del capítulo}
+
+
+
+\begin{itemize}
+  \item Resumen de los fenómenos que participan en esta parte de la evolución (están en la tesis de Gabriela).
+  \item El objetivo es calcular la evolución del radio $R(t)$ de la burbuja desde su valor máximo.
+  \item Hay que resolver la ecuación de movimiento \textcolor{blue}{Presentar ecuación, de dónde se obtuvo, qué es cada factor y de dónde se sacan los valores, son los mismos para deuterio e hidrógeno?}
+  \item La variación de masa $\dot{m}$ está dada por 3 fenómenos: reacciones químicas, difusión y condensación y evaporación. \textcolor{red}{Por qué en la tesis de gabriela solo hay variación de mp por condensación y evaporación}
+  \item Comentar que en este trabajo se logró implementar el código de reacciones y de condensación/evaporación.
+  \item Por otro lado, para calcular la variación de $p_B$ es necesario calcular $dT/dt$ para lo cual se necesita una expresión. Aquí es donde se introuce la conservación de la energía.
+  \item Comentar qué modelo se considera para la presión de los gases dentro de la burbuja y qué modelo para la energía
+  \item Comentar que se trata de un problema del tipo stiff y deberá ser trabajado con cuidado. No definir problemas stiff, eso conviene hacerlo en otra sección.
+end{itemize}
+
+\subsection{Fenómenos físicos}
+
+\subsubsection{Reacciones químicas}
+\begin{itemize}
+  \item Releer la parte de reacciones químicas de la tesis de Gabriela y el paper de Yasui al que se hace referencia. Esta sección intenta resumir eso.
+  \item \textcolor{red}{DUDA: en el código de Gabriela, n es nro de partículas o concentración? En la tesis es concentración}
+  \item \textcolor{red}{Vale la pena agregar acá la contribución de las reacciones químicas a la conservación de la energía?}
+\end{itemize}
+
+
+\subsubsection{Condensación y Evaporación}
+
+\begin{itemize}
+  \item Tengo que repasar la tesis de Gabriela y el paper de Yasui para comenzar a escribir esto
+  \item Sí se podría hacer mención a las ecuaciones para calcular la conducción de calor.
+\end{itemize}
+
+\subsection{Método numérico}
+
+\begin{itemize}
+  \item Mencionar que es un problema del tipo stiff. Explicar brevente de qué se trata esto
+  \item Historia de cómo el código pasó de ejecutar en días (el mío) o minutos (el de Gabriela) a segundos (el mío):
+  \item Comentar que ya se contaba con un código en C++ programado en Borland por Gabriela (y en qué año), pero que resolvía el sistema de ecuaciones diferenciales usando Runge-Kutta Ferhber \textcolor{red}{corroborar cómo se escribía}. Comentar qué complicaciones tenía y que se progrmó toro código en C++
+  \item Se usó el cluster.
+  \item Se optó por python. Se usó la librería scipy. Nuevamente el código era muy lento con RK45 pero con el método de Radau todo mejoró. \textcolor{red}{Explico esto?}
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section*{Conclusiones}
 \begin{enumerate}
@@ -174,10 +305,10 @@ We acknowledge advice from Jessie Zhang and Harry Pirie to produce Fig.\ \ref{fi
   \item Se calculó numéricamente el tiempo al que la burbuja alcanza el radio máximo, obteniendo un valor 10 veces mayor a los resultados experimentales (y teóricos del Bunkin)
   \item Ídem para la energía, salvo por un factor 600
   \item Se encontró que el problema es de naturaleza stiff, lo cual permitió elegir un mejor método numérico que el que se venía usando. Esto permitió disminuir enormemente el tiempo de cómputo
-  \item \textcolor{red}{Mencionar algo del cluster}
-
-
-
+  \item Se logró calcular la evolución de un único bubston, obteniendo los mismos resultados que el paper de Bunkin
+  \item Se logró implementar un módulo de reacciones, de conducción del calor y de condensación y evaporación.
+  \item Se pudo usar el cluster de MECOM para agilizar las cuentas del código en C++, aunque luego se decidió trabajar en python
+  \item Se lograron reproducir las  cuentas más importantes del Bunkin con Mathematica
 
 
 
