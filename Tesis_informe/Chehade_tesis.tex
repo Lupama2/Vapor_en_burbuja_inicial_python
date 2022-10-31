@@ -201,9 +201,9 @@ We acknowledge advice from Jessie Zhang and Harry Pirie to produce Fig.\ \ref{fi
 \end{itemize}
 
 
-
-
-
+Se busca calcular la presión eléctrica en $R = R_{cl}$ a tiempo inicial. La presión eléctrica está dada por la ecuación (17) del Bunkin
+\[p_{e} = \frac{2}{3}\bar{n_e} T_e \frac{x}{3} \left [1 + \pi \left ( \frac{x-1}{x} \right )^2 \frac{e^2R_{cl}^2\bar{n_e}}{T_e}   \right ] \]
+donde $\bar{n_e} = 3.4 *10^{16} \, \mathrm{cm}^{-3}$ es la densidad media de electrones en el cluster, $T_e \approx 0.1 \, \mathrm{eV}$ es la temperatura de los electrones, $x \approx 17.9$ es un parámetro, $e$ es la carga eléctrica y $R_{cl}$ es el radio del cluster que a $t=0$ es $R_{cl} \approx 10^{-2} \, \mathrm{cm}$.
 
 
 
@@ -240,6 +240,17 @@ Toegel Phase diagrams for sonoluminescing bubbles: A comparison between experime
   \item \textcolor{red}{DUDA: en el código de Gabriela, n es nro de partículas o concentración? En la tesis es concentración}
   \item \textcolor{red}{Vale la pena agregar acá la contribución de las reacciones químicas a la conservación de la energía?}
 \end{itemize}
+
+
+\begin{itemize}
+  \item Las reacciones químicas dentro de la burbuja son de no equilibrio \textcolor{red}{Referencia al libro de Yasui} y es necesario emplear un modelo de cinética química
+  \item Ocurren cuando las temperaturas en el interior de la burbuja son elevadas
+  \item En este trabajo se consideró sólo la presencia inicial de moléculas de $\mathrm{H_2O}$, $\mathrm{O_2}$ y $\mathrm{H_2}$, lo cual da lugar a \textcolor{red}{8} reacciones+
+  \item El cambio total 
+
+\end{itemize}
+
+
 
 
 \subsubsection{Condensación y Evaporación}
