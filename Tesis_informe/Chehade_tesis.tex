@@ -46,8 +46,8 @@ bookmarksopen=false,
 \newcommand\ptitle[1]{\par\refstepcounter{para}
 {\ifpnumber{\noindent\textcolor{lightgray}{\textbf{\thepara}}\indent}\fi}
 {\ifptitle{\textbf{[{#1}]}}\fi}}
-% \ptitletrue  % comment this line to hide paragraph titles
-% \pnumbertrue  % comment this line to hide paragraph numbers
+\ptitletrue  % comment this line to hide paragraph titles
+\pnumbertrue  % comment this line to hide paragraph numbers
 
 % minimum font size for figures
 \newcommand{\minfont}{6}
@@ -166,44 +166,187 @@ We acknowledge advice from Jessie Zhang and Harry Pirie to produce Fig.\ \ref{fi
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section*{Capítulo I: Evolución hasta el radio máximo}
 
 \ptitle{Resumen del capítulo}
+\begin{itemize}
+  \item En este capítulo se discute el proceso a partir del cual un láser incidente en un medio líquido es capaz de producir una burbuja de cavitación
+  \item El proceso se desarrolla en \textcolor{red}{Referencia al Bunkin}
+  \item Se parte de un medio líquido, en nuestro caso agua deuterada, en el cual se asume existen burbujas de gas (bubstons) agrupadas en clusters en la zona focal del haz de luz. 
+  \item Se asume que dentro de cada bubston hay inicialmente un electrón libre
+  \item Bajo estas condiciones, se demuestra en el paper que bajo determinadas condiciones de la burbuja y de la intensidad del haz, se desarrolla una avalancha de electrones
+  \item Esta produce una presión eléctrica que expande el bubston hasta que los bubstons del cluster se fusionan entre sí y forman una gran burbuja o "núcleo". 
+  \item Este efecto se denomina SOC
+  \item Explicar brevemente qué ocurre luego
+  \item Las cuentas se hacen en el sistema CGS
 
-\subsection{}
+\end{itemize}
+
+
+
+
+Armo el cuento hasta la coalescencia
+
+
+\subsection{Situación física inicial}
+\begin{itemize}
+  \item Resumen: en esta sección se explica la situación física inicial antes de la incidencia del láser.
+  \item Se parte de un medio líquido en el que se encuentran clusters de burbujas estables (bubstons) de radio $R_0$.
+  \item Explicar cómo calcular R0 y dar el valor aproximada
+  \item La estabilidad de los bubstons se basa en la condición $R_0 << l_{em}$. Explicar
+  \item Se considera que dentro de la burbuja hay al menos un electrón libre
+  \item Definir R0 en algún lado
+\end{itemize}
 
 \subsection{Avalancha de electrones dentro de los bubston}
 
+\ptitle{Resumen}
 \begin{itemize}
-  \item Resumen cualitativo
-  \item Determinación instantánea de la densidad de electrones y el potencial eléctrico
-  \item Determinación del campo eléctrico
-  \item Determinación de la presión eléctrica en la superficie de la burbuja ($p_{gas}$ + $p_{coulomb}$)
-  \item 
+  \item En esta sección se explicará el proceso a través del cual aumenta la cantidad de electrones $N_e$  dentro de cada bubston.
+  \item También se verá que para que ocurra la avalancha es necesario que el haz supere una determinada intensidad \textcolor{red}{dada por qué parámetros? del líquido?}
+  \item Además, se verá que durante la avalancha no aumenta la cantidad de electrones indefinidamente, sino que se llega a un valor máximo en un tiempo relativamente rápido
 \end{itemize}
+
+\ptitle{La avalancha comienza con un electrón dentro de la burbuja inmerso en el campo electromagnético producido por el láser}
+
+\begin{itemize}
+  \item La situación física inicial corresponde a un electrón dentro de un bubston inmerso en un campo electromagnético oscilatorio.
+  \item Debido al campo, el electrón se va a mover y va a chocar con las paredes de la burbuja con una frecuencia $\nu_{e w} = \bar{\nu_e}/R_0$ donde $\bar{\nu_e}$ es la velocidad media aritmética de los electrones.
+  \item En cada choque existe una probabilidad de que ionice alguna molécula de la pared, contribuyendo a la avalancha, y una probabilidad de que se quede adherido a alguna  de ellas, en decrimento de la avalancha.
+  \item El primer caso ocurre con frecuencia $\nu_i = \dot{\mathcal{E}_e}/\Delta$ donde $\dot{\mathcal{E}_e}$ es la velocidad media de aumento de la energía cinética del electrón ${\mathcal{E}_e}$ debido al movimiento caótico. Mientras que $\Delta$ es la energía de ionización de una molécula de la pared. Esta puede ser mucho menor que la energía de ionización de una molécula individual del líquido y se estima en $\sim 6$ eV. \textcolor{red}{Leer la referencia 4 en el Bunkin}. 
+  \item El segundo caso ocurre con frecuencia $(\bar{\nu}_e/R_0) w_{a,e}$ donde $w_{a,e}$ es la probabilidad de adhesión a la pared. 
+\end{itemize}
+
+\ptitle{Determinación de la frecuencia de ionización}
+\begin{itemize}
+  \item Asumiendo que el efecto del campo eléctrico es mayor al magnético, la velocidad $\dot{\mathcal{E}_e}$ corresponde a la potencia entregada por el haz a un electrón.
+  \item Además, considerando que la amplitud de oscilación del electrón es mucho menor a la longitud de onda del haz, el campo eléctrico se puede considerar uniforme.
+  \item Entonces, el campo eléctrico se puede expresar como $E(t) = E_0 \sin{(w t)}$, con $w$ frecuencia del haz y $E_0$ amplitud.
+  \item Para calcular la potencia es necesario analizar el movimiento del electrón
+  \item La posición del electrón está dada clásicamente por la ley de newton
+  \item $m \dot{v} = -e E(t) -m \nu_{e w} v $
+  \item donde $m$ es la masa del electrón, $v$ su velocidad y $e$ su carga. En esta ecuación las colisiones con la pared se tuvieron en cuenta a partir del término de fricción $m \nu_{e w} v$. 
+  \item Para tiempos largos (\textcolor{red}{definir esto}) se puede resolver la ecuación diferencial obteniendo la velocidad
+  \item \textcolor{blue}{expresión de la velocidad de la cuenta de Gustavo}
+  \item En base a esta velocidad se puede calcular la potencia entregada por el campo al electrón
+\end{itemize}
+
+\ptitle{Determinación de la frecuencia de pérdida de electrones}
+\begin{itemize}
+  \item test
+\end{itemize}
+
+\ptitle{Determinación del nro de electrones en función del tiempo}
+\begin{itemize}
+  \item Si la frecuencia de ionización es mayor a la de pérdida de electrones, se desarrolla una avalancha.
+  \item De este modo, a tiempos cortos (\textcolor{red}{para los que no creció demasiado el radio y se puede asegurar que solo ocurren los dos fenómenos anteriores?})
+  \item \textcolor{blue}{Expresión (2) del Bunkin}
+  \item donde \textcolor{blue}{derivación de $\theta$}.
+\end{itemize}
+
+\ptitle{Condición mínima para la intensidad del haz}
+\begin{itemize}
+  \item Esto da además una condición sobre la intensidad del haz. \textcolor{red}{Hacer una cuenta con el láser del laboratorio}
+\end{itemize}
+
+\ptitle{Aumento indefinido de electrones?}
+
+\begin{itemize}
+    \item Esto demuestra que aumentan los electrones y se forma dentro de la burbuja un gas de electrones.
+    \item Además, en la superficie se forma una esfera de carga uniforme positiva debido a los iones
+    \item La anterior evolución vale solo cuando la densidad media de electrones es pequeña y por lo tanto el camino libre medio de colisión entre electrones es más grande que el tamaño de la burbuja.
+    \item Cuando esto deja de valer, las colisiones de los electrones con la pared deben disminuir y por lo tanto debería disminuir la cantidad de electrones.
+    \item En la competencia de ambos procesos debería llegarse a un equilibrio en el que la cantidad de electrones no aumenta.
+    \item Este justificativo físico es necesario para continuar el análisis
+    \item El tiempo en el que ocurre esto y el valor de la densidad media máxima será determinado próximamente
+\end{itemize}
+
+\ptitle{Cálculo de la densidad media máxima}
+
+\begin{itemize}
+  \item Debido a la interacción coulombiana la densidad de electrones $n_e(r)$ debe ser no uniforme
+  \item Determinación instantánea de la densidad de electrones y el potencial eléctrico
+  \item Gráficos de ambas funciones
+\end{itemize}
+
+
+\ptitle{Cálculo del tiempo al que se alcanza la densidad media máxima $t_0$}
 
 
 
 \subsection{Coalescencia de los bubston y formación del núcleo}
 
 \begin{itemize}
-  \item 
+  \item Se busca calcular la evolución del radio. Para esto se cuenta con la ecuación diferencial aproximada
+  \item donde en la término de presión hay que considerar tanto la hidrostática como la de los electrones
+  \item Se parte de un gas de electrones dentro de la burbuja. 
+  \item Explicar la formación de la capa superficial y su justificación a partir del camino libre medio
+  \item Determinación del campo eléctrico
+  \item Determinación de la presión eléctrica en la superficie de la burbuja ($p_{gas}$ + $p_{coulomb}$)
+  \item Lo único que queda determinar es la temperatura. Para
 \end{itemize}
 
 
 \section{Evolución de la burbuja}
 
+Armo el cuento desde la coalesciancia hasta llegar a los resultados importantes de radio máximo y el tiempo al que se da
+
 \begin{itemize}
-  \item Ecuación diferencial para $R(t)$ (\textcolor{red}{la aproximada o la de Gabriela más completa?})
-  \item Referencia a la expresión de la presión eléctrica
-  \item Gráfico de R(t)
-  \item 
+  \item Luego del tiempo de coalescencia se asume que todos los bubstons se fusionan para formar una burbuja grande, a partir de ahora denominada "núcleo".
+  \item Condciones iniciales de la burbuja
+  \item Se busca calcular la presión eléctrica en $R = R_{cl}$ a tiempo inicial. La presión eléctrica está dada por la ecuación (17) del Bunkin
+  \[p_{e} = \frac{2}{3}\bar{n_e} T_e \frac{x}{3} \left [1 + \pi \left ( \frac{x-1}{x} \right )^2 \frac{e^2R_{cl}^2\bar{n_e}}{T_e}   \right ] \]
+  donde $\bar{n_e} = 3.4 *10^{16} \, \mathrm{cm}^{-3}$ es la densidad media de electrones en el cluster, $T_e \approx 0.1 \, \mathrm{eV}$ es la temperatura de los electrones, $x \approx 17.9$ es un parámetro, $e$ es la carga eléctrica y $R_{cl}$ es el radio del cluster que a $t=0$ es $R_{cl} \approx 10^{-2} \, \mathrm{cm}$.  
+  \item La velocidad inicial está dada por 
+  \item \textcolor{red}{condiciones para la fórmula de Willis. Buscar bien y explicar por qué se plantea la igualdad de energías a tiempo inicial. No me queda claro por qué deja de valer la evolución que hicimos con la presión de electrones.}
+  \item Ecuación diferencial de evolución del radio de la burbuja
+  \item Esta es una aproximación de la ecuación de momento \textcolor{red}{Referencial el libro "The Acustic Bubble" de T.G.Leighton}
+  \item teniendo en cuenta como presión a la hidrostática (el interior de la burbuja se considera vacío).
+  \item Mientras que las condiciones iniciales son 
+  \item Se obtuvo el radio máximo $\mathrm{R_{max}} = $ \textcolor{red}{valor?} cm a tiempo $\mathrm{t_{max}} = $ \textcolor{red}{valor?} s.
 \end{itemize}
 
 
-Se busca calcular la presión eléctrica en $R = R_{cl}$ a tiempo inicial. La presión eléctrica está dada por la ecuación (17) del Bunkin
-\[p_{e} = \frac{2}{3}\bar{n_e} T_e \frac{x}{3} \left [1 + \pi \left ( \frac{x-1}{x} \right )^2 \frac{e^2R_{cl}^2\bar{n_e}}{T_e}   \right ] \]
-donde $\bar{n_e} = 3.4 *10^{16} \, \mathrm{cm}^{-3}$ es la densidad media de electrones en el cluster, $T_e \approx 0.1 \, \mathrm{eV}$ es la temperatura de los electrones, $x \approx 17.9$ es un parámetro, $e$ es la carga eléctrica y $R_{cl}$ es el radio del cluster que a $t=0$ es $R_{cl} \approx 10^{-2} \, \mathrm{cm}$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -222,7 +365,7 @@ donde $\bar{n_e} = 3.4 *10^{16} \, \mathrm{cm}^{-3}$ es la densidad media de ele
   \item Por otro lado, para calcular la variación de $p_B$ es necesario calcular $dT/dt$ para lo cual se necesita una expresión. Aquí es donde se introuce la conservación de la energía.
   \item Comentar qué modelo se considera para la presión de los gases dentro de la burbuja y qué modelo para la energía
   \item Comentar que se trata de un problema del tipo stiff y deberá ser trabajado con cuidado. No definir problemas stiff, eso conviene hacerlo en otra sección.
-end{itemize}
+\end{itemize}
 
 \subsection{Fenómenos físicos}
 
