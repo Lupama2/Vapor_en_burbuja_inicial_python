@@ -187,7 +187,7 @@ We acknowledge advice from Jessie Zhang and Harry Pirie to produce Fig.\ \ref{fi
 \begin{itemize}
   \item En este capítulo se discute el proceso a partir del cual un láser incidente en un medio líquido es capaz de producir una burbuja de cavitación
   \item El proceso se desarrolla en \textcolor{red}{Referencia al Bunkin}
-  \item Se parte de un medio líquido, en nuestro caso agua deuterada, en el cual se asume existen burbujas de gas (bubstons) agrupadas en clusters en la zona focal del haz de luz. 
+  \item Se parte de un medio líquido, en nuestro caso agua deuterada, en el cual se asume existen micro burbujas de gas (bubstons) agrupadas en clusters en la zona focal del haz de luz. 
   \item Se asume que dentro de cada bubston hay inicialmente un electrón libre
   \item Bajo estas condiciones, se demuestra en el paper que bajo determinadas condiciones de la burbuja y de la intensidad del haz, se desarrolla una avalancha de electrones
   \item Esta produce una presión eléctrica que expande el bubston hasta que los bubstons del cluster se fusionan entre sí y forman una gran burbuja o "núcleo". 
@@ -287,29 +287,34 @@ Armo el cuento hasta la coalescencia
   \item Asumiendo la validez de la distribución de Boltzmann \textcolor{red}{y qué otras hipótesis??} y aplicando la ecuación de Poisson, esta densidad es solución del sistema de ecuaciones diferenciales
   \[
   \left\{\begin{matrix}
-    n_e(r) = n_e(0)e^{3 e \phi / 2 T_e}, 0 \leq r \leq R_0 \\
+    n_e(r) = n_e(0)e^{e \phi / T_e}, 0 \leq r \leq R_0 \\
     \triangledown^2 \phi = 4 \pi e n_e(r)
   \end{matrix}\right.
   \]
   \item donde $\phi$ es el potencial producido por la densidad de carga y $T_e$ es la temperatura del gas de electrones.
-  \item \textcolor{red}{Por qué el $3/2$??}
+  \item \textcolor{red}{Por qué el $3/2$?? Sacar el 3/2}
   \item Realizando la aproximación
-  \[e^{3 e \phi / 2 T_e} \approx 1 + 3e \phi/2T_e \]
+  \[e^{e \phi / T_e} \approx 1 + e \phi/T_e \]
   se logra despejar la ecuación diferencial para el potencial
   \[\triangledown^2 \phi - \phi/a_e^2 = 4 \pi e n_e(0) \]
   donde
-  $a_e = \sqrt{T_e/6\pi e^2 n_e(0)}$
+  $a_e = \sqrt{T_e/4\pi e^2 n_e(0)}$
   es el \textcolor{red}{electron Debye radius. Es lo mismo que el radio de Debye en un plasma?}
 
   \item Imponiendo $\phi(0) = 0$ se obtiene la solución
-  \item \[ \]
+  \item \[\phi(r) = \frac{T_e}{e} \left ( \frac{\sinh{r/a_e}}{r/a_e} - 1   \right ), \, 0 \leq r \leq R_0 \]
   \item y la distribución de electrones
-  \item \[ \]
+  \item \[n_e(r) = n_e(0) \frac{\sinh{r/a_e}}{r/a_e} \]
+  \item \textcolor{red}{Corroborar las expresiones! La definición de $a_e$ es distinta que en el paper}
   \item \textcolor{red}{Este problema se conoce como el problema de Debye. Esto se discute en $https://en.wikipedia.org/wiki/Debye_length$}
 
-
-  \item Gráficos de ambas funciones
+  \item \textcolor{blue}{Gráfico de la densidad de electrones. Se pueden poner letras como ticklabels en matplotlib $https://www.tutorialspoint.com/matplotlib/matplotlib_setting_ticks_and_tick_labels.htm$}
+  \item 
   \item Relación entre $n_e(R_0)$ y $\bar{n_e}$.
+  \item La densidad máxima se alcanza en la condición límite $l_{ee} = a_e$, obteniendo el valor máximo de la densidad y, por lo tanto, de la cantidad de electrones.
+  
+  \item Explicar en algún lado la la formación de la capa superficial y su justificación a partir del camino libre medio
+  
 \end{itemize}
 
 
@@ -318,20 +323,57 @@ Armo el cuento hasta la coalescencia
   \item \textcolor{red}{Basta decir que son tiempos cortos del orden de $6*10^{-11}$?? O tengo que hacer la cuenta? La cuenta es específica para esto y es muy larga}
 \end{itemize}
 
-
 \subsection{Coalescencia de los bubston y formación del núcleo}
 
 \begin{itemize}
-  \item Hasta ahora se vio que la cantidad de electrones dentro de la burbuja aumenta. ¿Qué efecto tiene esto en el tamaño de la burbuja?
-  \item Se busca calcular la evolución del radio. Para esto se cuenta con la ecuación diferencial aproximada
-  \item donde en la término de presión hay que considerar tanto la hidrostática como la de los electrones
-  \item Se parte de un gas de electrones dentro de la burbuja. 
-  \item Explicar la formación de la capa superficial y su justificación a partir del camino libre medio
-  \item Determinación del campo eléctrico a partir del potencial (referencia al potencial)
-  \item Determinación de la presión eléctrica en la superficie de la burbuja ($p_{gas}$ + $p_{coulomb}$)
-  \item Lo único que queda determinar es la temperatura. Para
+  \item Hasta ahora se vio que la cantidad de electrones dentro de la burbuja aumenta y al mismo ritmo se forma una capa superficial de cargas positivas debido a las moléculas ionizadas que rodean la burbuja.
+  \item Cabe preguntarse qué efecto tiene la distribución de carga sobre la dinámica de la burbuja.
+  \item Su efecto es el de producir una presión eléctrica sobre la pared de la burbuja, provocando su expansión. Tal presión $p_e$ se encuentra dada por
+  \item \[p_e = $p_{gas}$ + $p_{coul}$\]
+  \item donde $p_{gas} = (2/3)n_e(R)T_e(R)$ es la presión producida por el gas de electrones \textcolor{red}{por qué ese valor?} y $p_{coul} = E^2(R)/8 \pi$ es la presión debido a la repulsión coulombiana entre las cargas positivas y negativas. En esta última,
+  \[E(R) = -d\phi/dr = \dots \] 
+  es el campo eléctrico dentro de la burbuja.
+  \item \textcolor{red}{Tengo que agregar bien cómo se hace la cuenta? No recuerdo bien el argumento de Fabián}
+  \item De este modo,
+  \item \textcolor{blue}{Expresión para la presión eléctrica final sin introducir el x}
+  \item \textcolor{blue}{Gráfico de la presión para ver su dependencia con $1/R^4$}
 \end{itemize}
 
+Presentación de la ecuación diferencial de evolución de $R(t)$
+\begin{itemize}
+  \item A continuación se verá que la presión eléctrica produce que el bubston se expanda. Se parte de la ecuación de evolución de $R(t)$
+  \item Esta es una aproximación de la ecuación de momento \textcolor{red}{Referencial el libro "The Acustic Bubble" de T.G.Leighton}
+  \begin{equation}
+    R \dot{u} + \frac{3}{2}u^2 = \frac{p_e}{\rho}
+    \label{eq:bubston_ec_dif_R}
+  \end{equation}
+    \item donde $u = \dot{R} = dR/dt$ y se consideró que $p_e >> p_0$ presión hidrostática.)
+  \item Lo único que queda determinar para resolver la ecuación diferencial es la dependencia $n_e(R)$ y $T_e(R)$.
+\end{itemize}
+
+
+Definición del régimen de autoconsistencia
+\begin{itemize}
+  \item Hay que suponer que $\tau >> t_0$
+  \item El proceso de expansión se considera como cuasiestático. Esto implica que la temperatura del gas depende del radio $T = T(R)$ y que la distribución de electrones cambia con $R$ y $T(R)$ solamente.
+  \item Bajo estas condiciones, el número máximo de electrones $N_{e \, max}(R)$ \textcolor{red}{verificar fórmula. cambié la def de $a_e$} debería cambiar para cada valor de $R = R(t)$.
+  \item Sin embargo, físicamente se espera que no cambie en el tiempo debido a los argumentos presentados anteriormente y a la consideración del proceso como cuasiestático.
+  \item En base a esto, se define el proceso de expansión como un "régimen de autoconsistencia" en el que la cantidad de electrones no cambia con el tiempo.
+  \item Para que esto ocurra, se debe cumplir que
+  \item \[T_e(R) = T_e(R_0)\frac{R_0}{R} \]
+  \item donde $T_e(R_0) = \Delta/3$
+\end{itemize}
+
+Dinámica de la burbuja para $R>R_0$
+\begin{itemize}
+  \item Dada la funcionalidad conocida de $p_e(R)$, lo único que queda es resolver la ecuación diferencial \ref{eq:bubston_ec_dif_R}.
+  \item Esto se hizo numéricamente mediante el método Runge-Kutta-4.
+  \item \textcolor{red}{Tengo que explicar en detalle cómo resolví numéricamente el problema?}
+  \item \textcolor{blue}{Figura de R(t) marcando el límite en el que hay coalescencia}
+  \item Esta evolución no vale indefinidamente, sino hasta que se produce la coalescencia de los bubstons del mismo cluster. Esto ocurre cuando $R(t) = R_1=l/2$ donde $l$ es la distancia entre los centros de los bubstons. Esta longitud se puede estimar como $l \approx 2a_i$
+  \item \textcolor{red}{Revisar referencia y definir $a_i$}
+  \item Numéricamente se obtuvo que el tiempo en el que ocurre este proceso $t_{coal}$ es del orden de \textcolor{red}{valor?}
+\end{itemize}
 
 \section{Evolución de la burbuja}
 
@@ -340,14 +382,31 @@ Armo el cuento desde la coalesciancia hasta llegar a los resultados importantes 
 \begin{itemize}
   \item Luego del tiempo de coalescencia se asume que todos los bubstons se fusionan para formar una burbuja grande, a partir de ahora denominada "núcleo".
   \item Condciones iniciales de la burbuja
+  \item Calculo los distintos parámetros en función de las fórmulas presentadas
+  \item 
   \item Se busca calcular la presión eléctrica en $R = R_{cl}$ a tiempo inicial. La presión eléctrica está dada por la ecuación (17) del Bunkin
   \[p_{e} = \frac{2}{3}\bar{n_e} T_e \frac{x}{3} \left [1 + \pi \left ( \frac{x-1}{x} \right )^2 \frac{e^2R_{cl}^2\bar{n_e}}{T_e}   \right ] \]
   donde $\bar{n_e} = 3.4 *10^{16} \, \mathrm{cm}^{-3}$ es la densidad media de electrones en el cluster, $T_e \approx 0.1 \, \mathrm{eV}$ es la temperatura de los electrones, $x \approx 17.9$ es un parámetro, $e$ es la carga eléctrica y $R_{cl}$ es el radio del cluster que a $t=0$ es $R_{cl} \approx 10^{-2} \, \mathrm{cm}$.  
-  \item La velocidad inicial está dada por 
+
+  \item A partir de ahora puede dejar de valer el "régimen de autoconsistencia", por lo que la dependencia de $T(R)$ presentada en \textcolor{red}{referencia?} podría dejar de valer. En este sentido, se asume que los electrones del núcleo se encuentran a la misma temperatura correspondiente al instante anterior a la coalescencia, es decir, $T(R_1) \approx 0.1 eV$.
+
+
+
+  \item Debido a que no se conoce el proceso por el cual los bubstons forman el núcleo, tampoco se puede asumir que la distribución de electrones $n_e(r)$ mantenga la funcionalidad de la expresión \textcolor{red}{referencia}. Consecuentemente, la expresión para la presión eléctrica también deja de valer. Aún más, la ecuación de evolución \ref{eq:bubston_ec_dif_R} deja de valer debido a que durante la dinámica del clúster podría ocurrir que la presión eléctrica sea comparable con la hidrostática externa. 
+
+  \item Sin embargo, sí sepuede asumir $\dots$ \textcolor{red}{para continuar tengo que repasar las condiciones de la fórmula de Willis}
   \item \textcolor{red}{condiciones para la fórmula de Willis. Buscar bien y explicar por qué se plantea la igualdad de energías a tiempo inicial. No me queda claro por qué deja de valer la evolución que hicimos con la presión de electrones.}
-  \item Ecuación diferencial de evolución del radio de la burbuja
-  \item Esta es una aproximación de la ecuación de momento \textcolor{red}{Referencial el libro "The Acustic Bubble" de T.G.Leighton}
-  \item teniendo en cuenta como presión a la hidrostática (el interior de la burbuja se considera vacío).
+
+  \item 
+  \begin{equation}
+    R \dot{u} + \frac{3}{2}u^2 = \frac{p_0}{\rho}
+    \label{eq:bubston_ec_dif_R}
+  \end{equation}
+
+
+  \item La velocidad inicial está dada por 
+  \item \textcolor{blue}{fórmula de la velocidad inicial en función de la energía}
+  \item 
   \item Mientras que las condiciones iniciales son 
   \item Se obtuvo el radio máximo $\mathrm{R_{max}} = $ \textcolor{red}{valor?} cm a tiempo $\mathrm{t_{max}} = $ \textcolor{red}{valor?} s.
 \end{itemize}
@@ -400,6 +459,18 @@ Armo el cuento desde la coalesciancia hasta llegar a los resultados importantes 
 
 \subsection{Fenómenos físicos}
 
+
+
+
+\subsubsection{Condensación y Evaporación}
+
+\begin{itemize}
+  \item Tengo que repasar la tesis de Gabriela y el paper de Yasui para comenzar a escribir esto
+  \item Sí se podría hacer mención a las ecuaciones para calcular la conducción de calor.
+\end{itemize}
+
+
+
 \subsubsection{Reacciones químicas}
 
 Gabriela obtuvo el modelo de reacciones qcas del paper de Yasui 1997. \textcolor{red}{Podría verificar si no hay un mejor modelo}.
@@ -424,15 +495,6 @@ Toegel Phase diagrams for sonoluminescing bubbles: A comparison between experime
 
 \end{itemize}
 
-
-
-
-\subsubsection{Condensación y Evaporación}
-
-\begin{itemize}
-  \item Tengo que repasar la tesis de Gabriela y el paper de Yasui para comenzar a escribir esto
-  \item Sí se podría hacer mención a las ecuaciones para calcular la conducción de calor.
-\end{itemize}
 
 \subsection{Método numérico}
 
