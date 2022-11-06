@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2022.4.23)  6 NOV 2022 12:07
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2022.4.23)  6 NOV 2022 17:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -639,9 +639,6 @@ LaTeX Warning: Command \guillemotright invalid in math mode on input line 238.
 
 Missing character: There is no » in font cmr10!
 
-LaTeX Warning: Reference `eq:dNedt_2' on page 2 undefined on input line 251.
-
-
 Underfull \hbox (badness 1028) in paragraph at lines 255--256
 \TU/lmr/m/n/10 el problema de Debye. Esto se discute en $\OML/cmm/m/it/10 https
  \OT1/cmr/m/n/10 :
@@ -716,10 +713,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 342.
 
-
-LaTeX Warning: Reference `eq:cap1_Nemax_R0' on page 3 undefined on input line 3
-50.
-
 [3]
 Overfull \hbox (52.42812pt too wide) detected at line 368
 \OML/cmm/m/it/10 p[] \OT1/cmr/m/n/10 = [] []
@@ -738,23 +731,23 @@ Underfull \hbox (badness 1655) in paragraph at lines 395--396
  []\TU/lmr/m/n/10 Esto se hizo numéricamente mediante el método
  []
 
-[4] [5]
+[4]
+Overfull \hbox (421.6151pt too wide) detected at line 486
+[][][] \OML/cmm/m/it/10 R[] \OT1/cmr/m/n/10 + [][] [] = [] [] [] + [] [] + [] [
+] + [][]
+ []
+
+[5]
 No file Chehade_tesis.bbl.
 [6] (Chehade_tesis.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `Chehade_tesis.out' has not changed.
-(rerunfilecheck)             Checksum: 1A039ADC12847B7C4F3B7FD6E60136F1;3301.
+(rerunfilecheck)             Checksum: 66872A30B61C39285C1442213D7E09CA;3393.
  ) 
 Here is how much of TeX's memory you used:
- 16233 strings out of 410944
- 257270 string characters out of 2823429
- 616249 words of memory out of 3000000
- 36786 multiletter control sequences out of 15000+600000
+ 16235 strings out of 410944
+ 257296 string characters out of 2823429
+ 616466 words of memory out of 3000000
+ 36788 multiletter control sequences out of 15000+600000
  479079 words of font info for 71 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,7n,77p,1473b,475s stack positions out of 10000i,1000n,20000p,200000b,80000s

@@ -400,7 +400,7 @@ Dinámica de la burbuja para $R>R_0$
   \item Numéricamente se obtuvo que el tiempo en el que ocurre este proceso $t_{coal}$ es del orden de \textcolor{red}{valor?}
 \end{itemize}
 
-\section{Evolución de la burbuja}
+\subsection{Evolución desde la formación del núcleo}
 
 Armo el cuento desde la coalesciancia hasta llegar a los resultados importantes de radio máximo y el tiempo al que se da
 
@@ -468,23 +468,47 @@ Armo el cuento desde la coalesciancia hasta llegar a los resultados importantes 
 
 \subsection{Resumen del capítulo}
 
-
-
+\ptitle{Descripción general de los fenómenos}
 \begin{itemize}
-  \item Resumen de los fenómenos que participan en esta parte de la evolución (están en la tesis de Gabriela).
-  \item El objetivo es calcular la evolución del radio $R(t)$ de la burbuja desde su valor máximo.
-  \item Hay que resolver la ecuación de movimiento \textcolor{blue}{Presentar ecuación, de dónde se obtuvo, qué es cada factor y de dónde se sacan los valores, son los mismos para deuterio e hidrógeno?}
-  \item La variación de masa $\dot{m}$ está dada por 3 fenómenos: reacciones químicas, difusión y condensación y evaporación. \textcolor{red}{Por qué en la tesis de gabriela solo hay variación de mp por condensación y evaporación}
+  \item El objetivo es calcular la evolución de una burbuja de radio inicial $R_{max}$ \textcolor{red}{tiene que tener el mismo nombre que el cap anterior} hasta el estado de compresión máxima.
+  \item En el capítulo anterior solo se tuvieron en cuenta las fuerzas hidrostáticas y eléctricas. En este capítulo se consideran no se considerarán las fuerzas eléctricas.
+  \item Se considerarán una gran variedad de efectos físicos que se demostraron son importantes en la evolución de la burbuja \textcolor{red}{Referencia a Gabriela}
+  \item Estos son la compresibilidad y viscosidad del medio líquido que rode a la burbuja, la transferencia de calor, la transferencia de masa debido a condensación y evaporación del vapor, la difusión de las partículas de vapor y la variación del número de partículas de distintas especies debido a reacciones químicas.
+  \item El objetivo es calcular la evolución del radio $R(t)$ de la burbuja
+\end{itemize}
+
+\ptitle{Ecuación diferencial para $R(t)$}
+\begin{itemize}
+  \item La evolución del radio $R(t)$ de la burbuja está dada por la ecuación de Rayleigh y Plasset generalizada \textcolor{red}{Referencia al Yasui. No sé a cuál de todos. Fijarme que el paper tenga la misma ecuación}
+  \begin{equation}
+    \left ( 1 - \frac{\dot{R}}{c_L}  + \frac{\dot{m}}{c_L \rho_{L,i}}   \right ) R \ddot{R} + \frac{3}{2} \dot{R}^2 \left (  1 - \frac{\dot{R}}{3 c_L} + \frac{2 \dot{m}}{3 c_L \rho_{L,i}}  \right ) = \frac{1}{\rho_{L,i}} \left ( 1 + \frac{\dot{R}}{c_L} \right )  \left ( p_B - p_\infty \right ) + \frac{\ddot{m} R}{\rho_{L,i}} \left ( 1 - \frac{\dot{R}}{c_L} + \frac{\dot{m}}{c_L \rho_{L,i}} \right ) + \frac{\dot{m}}{\rho_{L,i}} \left ( \dot{R} - \frac{\dot{m}}{2 \rho_{L,i}} + \frac{\dot{m}\dot{R}}{2 c_L \rho_{L,i}}  \right ) + \frac{R}{c_L \rho_{L, \infty}} \frac{d p_B}{dt}
+    \label{eq:cap2_R_ecdif}
+  \end{equation}
+  donde $c_L$ es la velocidad del líquido en el infinito, $\dot{m}$ es el flujo neto de evaporación por unidad de área y unidad de tiempo,$\rho_{L,i}$ es la densidad del líquido en la superficie de la burbuja, $\rho_{L, \infty}$ es la densidad del líquido en el infinito, $p_B(t)$ es la presión del líquido sobre la superficie externa de la burbuja y $p_\infty$ es la presión ambiente en el infinito.
+  \textcolor{blue}{Presentar ecuación, de dónde se obtuvo, qué es cada factor y de dónde se sacan los valores, son los mismos para deuterio e hidrógeno?}
+\end{itemize}
+
+
+\ptitle{¿Dónde se considerará cada fenómeno?}
+\begin{itemize}
+  \item ¿Dónde serán tenidos en cuenta los fenómenos físicos comentados anteriormente?
+  \item La compresibilidad y viscodidad del medio líquido fueron tenidas en cuenta en la ecuación de $R(t)$
+  \item Para calcular $\dot{m}$ es necesario considerar la evaporación y condensación en las paredes de la burbuja, así como la transferencia de calor.
+  \item Para calcular $p_B$ se necesita una ecuación de estado del gas interno
+  \item Para calcular $\frac{dp_B}{dt}$ se necesita conocer cómo varía el número de partículas de cada especie dentro de la burbuja a través de reacciones químicas y, para el caso particular de gases condensables, se necesitan considerar difusión. Además, se ncesita conocer cómo varía la temperatura de la burbuja, necesitando una ecuación para la conservación de la energía
+\end{itemize}
+
+\ptitle{¿Qué fenómenos se implementaron en este trabajo?}
+\begin{itemize}
   \item Comentar que en este trabajo se logró implementar el código de reacciones y de condensación/evaporación.
-  \item Por otro lado, para calcular la variación de $p_B$ es necesario calcular $dT/dt$ para lo cual se necesita una expresión. Aquí es donde se introuce la conservación de la energía.
   \item Comentar qué modelo se considera para la presión de los gases dentro de la burbuja y qué modelo para la energía
   \item Comentar que se trata de un problema del tipo stiff y deberá ser trabajado con cuidado. No definir problemas stiff, eso conviene hacerlo en otra sección.
 \end{itemize}
 
+
+
+
 \subsection{Fenómenos físicos}
-
-
-
 
 \subsubsection{Condensación y Evaporación}
 
