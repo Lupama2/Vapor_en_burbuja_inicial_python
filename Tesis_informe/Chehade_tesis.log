@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2022.4.23)  6 NOV 2022 09:41
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2022.4.23)  6 NOV 2022 10:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -551,8 +551,11 @@ File: l3backend-xetex.def 2022-04-14 L3 backend support: XeTeX
 \g__pdf_backend_object_int=\count305
 \g__pdf_backend_annotation_int=\count306
 \g__pdf_backend_link_int=\count307
+) (Chehade_tesis.aux
+
+LaTeX Warning: Label `eq:bubston_ec_dif_R' multiply defined.
+
 )
-No file Chehade_tesis.aux.
 \openout1 = `Chehade_tesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
@@ -566,7 +569,7 @@ LaTeX Font Info:    ... okay on input line 136.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 136.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
 36.
-(C:\Users\lupam\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
+ (C:\Users\lupam\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 136.
@@ -602,4 +605,97 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 LaTeX Info: Redefining \ref on input line 136.
 LaTeX Info: Redefining \pageref on input line 136.
-LaTeX Info: 
+LaTeX Info: Redefining \nameref on input line 136.
+ (Chehade_tesis.out) (Chehade_tesis.out)
+\@outlinefile=\write5
+\openout5 = `Chehade_tesis.out'.
+
+Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 136.
+\openout3 = `Chehade_tesisNotes.bib'.
+
+
+
+Class revtex4-2 Warning: Assuming \noaffiliation for authors.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 204
+.
+(C:\Users\lupam\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 204
+.
+
+(C:\Users\lupam\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 206.
+
+Missing character: There is no « in font cmr10!
+[1]
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 236.
+
+Missing character: There is no » in font cmr10!
+
+Underfull \hbox (badness 1028) in paragraph at lines 253--254
+\TU/lmr/m/n/10 el problema de Debye. Esto se discute en $\OML/cmm/m/it/10 https
+ \OT1/cmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 1168) in paragraph at lines 253--254
+\OML/cmm/m/it/10 ==en:wikipedia:org=wiki=Debye[]ength$[] \TU/lmr/m/n/10 y aplic
+ando la
+ []
+
+[2]
+Overfull \hbox (54.27533pt too wide) detected at line 281
+\OML/cmm/m/it/10 N[] \OT1/cmr/m/n/10 = 4\OML/cmm/m/it/10 ^^Y [][] r[]n[]\OT1/cm
+r/m/n/10 (\OML/cmm/m/it/10 r\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dr \OT1/cmr/m/n/1
+0 = [][]
+ []
+
+
+Underfull \hbox (badness 1502) in paragraph at lines 307--309
+ [][]\TU/lmr/m/n/10 Gráfico de la densidad de electrones. Se pueden
+ []
+
+
+Overfull \hbox (112.13445pt too wide) in paragraph at lines 307--309
+ \OML/cmm/m/it/10 ==www:tutorialspoint:com=matplotlib=matplotlib[]etting[]icks[
+]nd[]ick[]abels:htm$[] 
+ []
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 350.
+
+Missing character: There is no » in font cmr10!
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 357.
+
+Missing character: There is no » in font cmr10!
+
+Underfull \hbox (badness 1655) in paragraph at lines 370--371
+ []\TU/lmr/m/n/10 Esto se hizo numéricamente mediante el método
+ []
+
+[3] [4]
+No file Chehade_tesis.bbl.
+[5] (Chehade_tesis.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `Chehade_tesis.out' has not changed.
+(rerunfilecheck)             Checksum: 51EAEE73F6A43B21CD5C95ED861EBE4E;3334.
+ ) 
+Here is how much of TeX's memory you used:
+ 16161 strings out of 410944
+ 253748 string characters out of 2823429
+ 615165 words of memory out of 3000000
+ 36731 multiletter control sequences out of 15000+600000
+ 474139 words of font info for 54 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 67i,7n,77p,1473b,469s stack positions out of 10000i,1000n,20000p,200000b,80000s
+
+Output written on Chehade_tesis.pdf (5 pages).

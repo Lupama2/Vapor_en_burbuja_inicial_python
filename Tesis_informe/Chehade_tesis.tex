@@ -1,8 +1,5 @@
 \documentclass[aps,prb,twocolumn,superscriptaddress,floatfix,longbibliography,10pt]{revtex4-2}
 
-% \documentclass[aps,prb,superscriptaddress,floatfix,longbibliography,13pt]{revtex4-2}
-
-
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
@@ -150,7 +147,7 @@ We acknowledge advice from Jessie Zhang and Harry Pirie to produce Fig.\ \ref{fi
 
 \begin{abstract}
   \begin{itemize}
-    \item \textcolor{red}{TEST}
+    \item \textcolor{red}{TEST2}
     \item Se estudió numéricamente la expansión de una burbuja de cavitación láser. \textcolor{red}{y la compresión}
     \item La evolución temporal se divide en dos partes, cada una de ellas gobernada por fenómenos físicos distintos.
     \item La primera consta desde la creación de la burbuja hasta la expansión rápida al radio máximo. El fenómeno que creemos ocurre es la interacción del láser con los electrones de burbujas microscópicas (bubston) para dar lugar a una avalancha de electrones impulsora de la expansión (fenómeno electromagnético y fluidodinámico). El fenómeno se debe principalmente a la acción de los electrones y las moléculas ionizadas que rodean exteriormente la burbuja.
@@ -217,8 +214,9 @@ We acknowledge advice from Jessie Zhang and Harry Pirie to produce Fig.\ \ref{fi
 
 En esta sección se explicará el proceso a través del cual aumenta la cantidad de electrones $N_e$ dentro de cada bubston al incidir un láser. Se parte de la hipótesis de que existe al menos un electrón libre en cada uno de ellos. Además, se asume ocurre rápidamente de modo que su radio se mantiene aproximadamente constante. Se encontrará que el aumento de $N_e$ no es indefinido, sino que se alcanza un valor máximo a partir del cual se mantiene constante. También se hallará una condición sobre la intensidad del haz de luz necesaria para que ocurra la avalancha.
 
-\textcolor{red}{La suposición de que el radio se mantiene constante y el proceso ocurre rápidamente es necesaria para, creo, asegurar que solo ocurren 2 fenómenos que contribuyen a la avalancha}
+\textcolor{red}{La suposición de que el radio se mantiene constante y el proceso ocurre rápidamente es necesaria para, creo, asegurar que solo ocurren 2 fenómenos que contribuyen a la avalancha. Fabián: referenciá al Bunkin para justificar}
 
+\textcolor{red}{En algún lado hay que agregar que tmb hay que suponer que $\tau >> t_0$. Esto implica que el láser está el suficiente tiempo para que se alcance el valor máximo $N_{e \, max}$}.
 
 \ptitle{La avalancha comienza con un electrón dentro de la burbuja inmerso en el campo electromagnético producido por el láser}
 
@@ -275,54 +273,109 @@ y la distribución de electrones
 \end{equation}
 
 
-\ptitle{Cálculo de las ctes de la expresión de la densidad máxima y de $N_e$ y }
+\ptitle{Cálculo de las ctes de la expresión de la densidad máxima}
 
 \begin{itemize}
   \item A partir de la definición de $a_e$ se obtiene una expresión para $n_e(0)$
-  \item Solo falta calcular $a_e$
-  \item Esto se puede hacer a partir de la relación
-  \item \[N_e = 4 \pi \int_0^{R_0} r^2 n_e(r) dr \]
+  \item Solo falta calcular $a_e$.
+  \item Esto se puede hacer a partir de la relación de autoconsistencia
+  \item \begin{equation}
+          N_e = 4 \pi \int_0^{R_0} r^2 n_e(r) dr = \frac{T_e R_0}{e^2} \frac{(R_0/a_e) \cosh{(R_0/a_e)} - \sinh{(R_0/a_e)}}{R_0/a_e}
+          \label{eq:cap1_Ne}
+        \end{equation}
+  \item $a_e$ es solución de la ecuación anterior para dado $N_e$
+  \item \ref{fig:cap1_Ne_vs_x}
+  \item En base a lo anterior se puede expresar $n_e(r)$
+  \item \ref{fig:cap1_densidad_vs_r_vs_Ne}
+  \item Discusión del gráfico
+  \item Mostrar que los electrones se juntan en su mayoría en el borde de la burbuja. Esta es una capa límite de tamaño $a_e$
+  \item Entonces, la condición límite pasa a ser $l_ee = a_e$.
+\end{itemize}
+
+\begin{figure}[h]
+  \includegraphics[clip=true,width=\columnwidth]{cap1_Ne_vs_x.pdf}
+  \caption{}
+    \label{fig:cap1_Ne_vs_x}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[clip=true,width=\columnwidth]{cap1_densidad_vs_r_vs_Ne.pdf}
+  \caption{}
+   \label{fig:cap1_densidad_vs_r_vs_Ne}
+\end{figure}
+
+
+\ptitle{Cálculo de $N_{e \, max}$}
+\begin{itemize}
+  \item $N_e$ alcanza su valor máximo $N_{e \, max}$ en la condición límite $l_{ee} = a_e$.
+  \item donde $l_{ee}$ está dado por
+  \item expresión con referencia
+  \item donde
+  \item expresión para $n_e(R_0)$ con label
+  \item Para continuar con el desarrollo es necesario introducir la siguiente aproximación.
+  \item En base al gráfico de $N_e$ \textcolor{red}{referencia}, para que $N_e$ sea grande, debe ocurrir que $R_0/a_e>>1$.
+  \item Bajo este límite se obtiene $N_e \approx \frac{T_e R_0}{2 e^2} e^{R_0/a_e}$
+  \item y $n_e(R_0) \approx \frac{T_e}{8 \pi e^2 R_0^2} \frac{R_0}{a_e} e^{R_0/a_e}$
+  \item a partir de \ref{eq:cap1_Ne} y referencia, respectivamente
+  \item Juntando ambas expresiones se obtiene
+  \item \[n_e(R_0) \approx \frac{N_e}{4 \pi R_0^2 a_e} \, \mathrm{para } \, \frac{R_0}{a_e} \gg 1 \]
+  \item Volviendo a la condición límite $l_{ee} = a_e$ se obtiene
   \item 
+  \begin{equation}
+    N_{e \, max} = \frac{64}{9} \frac{T_e^2 R_0^2}{e^4}
+    \label{eq:cap1_Nemax_R0}
+  \end{equation}
 \end{itemize}
 
+\textcolor{blue}{Gráfico de la densidad de electrones. Se pueden poner letras como ticklabels en matplotlib $https://www.tutorialspoint.com/matplotlib/matplotlib_setting_ticks_and_tick_labels.htm$}
 
+
+
+\ptitle{Cálculo del tiempo al que se alcanza la densidad media máxima $t_0$??}
 \begin{itemize}
-  \item \textcolor{blue}{Gráfico de la densidad de electrones. Se pueden poner letras como ticklabels en matplotlib $https://www.tutorialspoint.com/matplotlib/matplotlib_setting_ticks_and_tick_labels.htm$}
-  \item 
-  \item Relación entre $n_e(R_0)$ y $\bar{n_e}$.
+  \item \textcolor{red}{Basta decir que son tiempos cortos del orden de $6*10^{-11}$?? O tengo que hacer la cuenta? La cuenta es específica para esto y es muy larga. Fabián: por lo pronto, referenciá al Bunkin. Si tenemos tiempo lo escribimos bien}
 \end{itemize}
 
-\ptitle{Cálculo de $\bar{n}_{e \, max}$ y $N_{e \, max}$}
+
+
+\subsection{Evolución desde $N_e = N_{e \, max}$ hasta $R = R1$}
+
+\ptilte{Resumen}
+En la sección anterior se concluyó que la cantidad de electrones dentro de un bubston alcanza un valor límite $N_{e \, max}$ en un período corto de tiempo durante el cual se asume que no cambia significativamente el radio. Al mimsmo ritmo se forma una capa superficial de cargas positivas en el exterior del bubston debido a las moléculas ionizadas. Cabe preguntarse qué efecto tiene esta distribución de carga sobre la dinámica de la burbuja. En esta sección se verá que tal distribución produce una presión eléctrica que tiende a expandir la burbuja. Además, para determinar la evolución del radio se realizan dos suposiciones. En primer lugar, que el proceso es cuasiestático de modo que las expresiones de la sección anterior válidas para $R_0$, ahora valen para $R(t)$ radio del bubston. En segundo lugar, se asume que el número de electrones $N_{e}$ se mantiene constante en su valor máximo. Por último, el bubston no se expande indefinidamente, sino hasta tomar contacto con los demás bubstons del cluster.
+
+
+\ptitle{Consecuencias de las hipótesis: régimen de autoconsistencia}
 \begin{itemize}
-  \item La densidad máxima se alcanza en la condición límite $l_{ee} = a_e$, obteniendo el valor máximo de la densidad y, por lo tanto, de la cantidad de electrones.
-  
-  \item Explicar en algún lado la la formación de la capa superficial y su justificación a partir del camino libre medio
-  
+  \item En base a la primer hipótesis y a la expresión \ref{eq:cap1_Nemax_R0} se obtiene
+  \item \[N_{e \, max}(t) = \frac{64}{9} \frac{T_e^2 R(t)^2}{e^4}\]
+  \item que aumenta a medida que $R$ lo hace. Sin embargo, en base a la segunda hipótesis, $N_{e, max}$ debe mantenerse constante. Esto exige que $T_e$ se comporte de la forma
+  \begin{equation}
+    T_e(R) = T_e(R_0)\frac{R_0}{R}
+    \label{eq:cap1_Te}
+  \end{equation}
+  donde $T_e(R_0) = \Delta/3$ temperatura inicial del bubston. Se asume que esta dependencia vale solo durante la expansión del bubston.
 \end{itemize}
 
 
-\ptitle{Cálculo del tiempo al que se alcanza la densidad media máxima $t_0$}
-\begin{itemize}
-  \item \textcolor{red}{Basta decir que son tiempos cortos del orden de $6*10^{-11}$?? O tengo que hacer la cuenta? La cuenta es específica para esto y es muy larga}
-\end{itemize}
 
-\subsection{Coalescencia de los bubston y formación del núcleo}
+\ptitle{Presión eléctrica}
+Como se mencionó anteriormente, la distribución de carga produce una presión eléctrica $p_e$ sobre la pared de la burbuja. Tal presión está dada por dos contribuciones
+\[p_e = p_{gas} + p_{coul}\]
+donde $p_{gas} = (2/3)n_e(R)T_e(R)$ es la presión producida por el gas de electrones \textcolor{red}{por qué ese valor?} y $p_{coul} = E^2(R)/8 \pi$ es la presión debido a la repulsión coulombiana entre las cargas positivas y negativas. \textcolor{red}{Tengo que agregar bien cómo se hace la cuenta de la $p_{coul}$? No recuerdo bien el argumento de Fabián}. En esta última, el campo eléctrico $E(r)$ está dado por
+\[E(r) = -d\phi/dr = \frac{T_e a_e}{e r^2} \left[ \sinh{\left (\frac{r}{a_e} \right )} - \frac{r}{a_e} \cosh{\left (\frac{r}{a_e} \right )}  \right]  \] 
+De este modo,
+\[p_{e} = \frac{T_e^2}{\pi e^2} \left \{ \frac{1}{6 R a_e }\sinh{\left (  \frac{R}{a_e} \right )}+ \frac{a_e^2}{8 R^4} \left [ \sinh{\left (\frac{R}{a_e} \right )} - \frac{R}{a_e} \cosh{\left (\frac{R}{a_e} \right )}  \right ]^2  \right \} \]
+En la figura \ref{fig:cap1_p_e_vs_R}
+se grafica $p_e(R)$.
 
-\begin{itemize}
-  \item Hasta ahora se vio que la cantidad de electrones dentro de la burbuja aumenta y al mismo ritmo se forma una capa superficial de cargas positivas debido a las moléculas ionizadas que rodean la burbuja.
-  \item Cabe preguntarse qué efecto tiene la distribución de carga sobre la dinámica de la burbuja.
-  \item Su efecto es el de producir una presión eléctrica sobre la pared de la burbuja, provocando su expansión. Tal presión $p_e$ se encuentra dada por
-  \item \[p_e = $p_{gas}$ + $p_{coul}$\]
-  \item donde $p_{gas} = (2/3)n_e(R)T_e(R)$ es la presión producida por el gas de electrones \textcolor{red}{por qué ese valor?} y $p_{coul} = E^2(R)/8 \pi$ es la presión debido a la repulsión coulombiana entre las cargas positivas y negativas. En esta última,
-  \[E(R) = -d\phi/dr = \dots \] 
-  es el campo eléctrico dentro de la burbuja.
-  \item \textcolor{red}{Tengo que agregar bien cómo se hace la cuenta? No recuerdo bien el argumento de Fabián}
-  \item De este modo,
-  \item \textcolor{blue}{Expresión para la presión eléctrica final sin introducir el x}
-  \item \textcolor{blue}{Gráfico de la presión para ver su dependencia con $1/R^4$}
-\end{itemize}
+\begin{figure}[h]
+  \includegraphics[clip=true,width=\columnwidth]{cap1_p_e_vs_R.pdf}
+  \caption{\textcolor{blue}{Gráfico de la presión para ver su dependencia con $1/R^4$}}
+   \label{fig:cap1_p_e_vs_R}
+\end{figure}
+\textcolor{red}{Discusión de la dependencia}
 
-Presentación de la ecuación diferencial de evolución de $R(t)$
+\ptitle{Presentación de la ecuación diferencial de evolución de $R(t)$}
 \begin{itemize}
   \item A continuación se verá que la presión eléctrica produce que el bubston se expanda. Se parte de la ecuación de evolución de $R(t)$
   \item Esta es una aproximación de la ecuación de momento \textcolor{red}{Referencial el libro "The Acustic Bubble" de T.G.Leighton}
@@ -330,22 +383,10 @@ Presentación de la ecuación diferencial de evolución de $R(t)$
     R \dot{u} + \frac{3}{2}u^2 = \frac{p_e}{\rho}
     \label{eq:bubston_ec_dif_R}
   \end{equation}
-    \item donde $u = \dot{R} = dR/dt$ y se consideró que $p_e >> p_0$ presión hidrostática.)
-  \item Lo único que queda determinar para resolver la ecuación diferencial es la dependencia $n_e(R)$ y $T_e(R)$.
+    \item donde $u = \dot{R} = dR/dt$ y se consideró que $p_e >> p_0$ presión hidrostática.
 \end{itemize}
 
 
-Definición del régimen de autoconsistencia
-\begin{itemize}
-  \item Hay que suponer que $\tau >> t_0$
-  \item El proceso de expansión se considera como cuasiestático. Esto implica que la temperatura del gas depende del radio $T = T(R)$ y que la distribución de electrones cambia con $R$ y $T(R)$ solamente.
-  \item Bajo estas condiciones, el número máximo de electrones $N_{e \, max}(R)$ \textcolor{red}{verificar fórmula. cambié la def de $a_e$} debería cambiar para cada valor de $R = R(t)$.
-  \item Sin embargo, físicamente se espera que no cambie en el tiempo debido a los argumentos presentados anteriormente y a la consideración del proceso como cuasiestático.
-  \item En base a esto, se define el proceso de expansión como un "régimen de autoconsistencia" en el que la cantidad de electrones no cambia con el tiempo.
-  \item Para que esto ocurra, se debe cumplir que
-  \item \[T_e(R) = T_e(R_0)\frac{R_0}{R} \]
-  \item donde $T_e(R_0) = \Delta/3$
-\end{itemize}
 
 Dinámica de la burbuja para $R>R_0$
 \begin{itemize}
@@ -383,7 +424,6 @@ Armo el cuento desde la coalesciancia hasta llegar a los resultados importantes 
   \item 
   \begin{equation}
     R \dot{u} + \frac{3}{2}u^2 = \frac{p_0}{\rho}
-    \label{eq:bubston_ec_dif_R}
   \end{equation}
 
 
