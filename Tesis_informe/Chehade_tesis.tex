@@ -505,7 +505,14 @@ Armo el cuento desde la coalesciancia hasta llegar a los resultados importantes 
   \item Comentar que se trata de un problema del tipo stiff y deberá ser trabajado con cuidado. No definir problemas stiff, eso conviene hacerlo en otra sección.
 \end{itemize}
 
-
+\ptitle{Descripción física del problema}
+\begin{itemize}
+  \item \textcolor{red}{Lo que escribo acá estaría bueno mencionarlo arriba en algún lugar}
+  \item La burbuja consta de un gas interno que se asume está a una temperatura uniforma $T$ salvo por una capa superficial cerca de la pared de la burbuja. El gas en la sección interior de la capa se encuentra a temperatura $T_{B,i}$, mientras que el líquido en la sección exterior se encuentra a temperatura $T_{L,i}$.
+  \item Esto está propuesto por resultados teóricos de la referencia [22] en el paper de Yasui 1997.
+  \item El salto de temperatura en la interfase se puede demostrar mediante teoría cinética de gases \textcolor{red}{Esto está referenciado en Yasui 1997 y en la tesis de Gabriela}
+  \item \textcolor{blue}{Podría agregarse una imagen representativa para mayor claridad}
+\end{itemize}
 
 
 \subsection{Fenómenos físicos}
@@ -517,6 +524,49 @@ Armo el cuento desde la coalesciancia hasta llegar a los resultados importantes 
   \item Sí se podría hacer mención a las ecuaciones para calcular la conducción de calor.
 \end{itemize}
 
+\ptitle{Definición de $\dot{m}$}
+\begin{itemize}
+  \item El flujo neto de evaporación por unidad de área y tiempo $\dot{m}$ es la diferencia entre el flujo de evaporación $\dot{m}_{eva}$ y el de condensación $\dot{m}_{cond}$, es decir,
+  \item \[\dot{m} = \dot{m}_{eva} - \dot{m}_{cond} \]
+  \item Estos flujos están dados por
+  \[\dot{m}_{eva} = \frac{\alpha_M}{\sqrt{2 \pi R_v}} \frac{p_v^*}{\sqrt{T_{L,i}}} \]
+  \[\dot{m}_{cond} = \frac{\alpha_M}{\sqrt{2 \pi R_v}} \frac{\Gamma p_v}{\sqrt{T_{B,i}}}  \]
+  \textcolor{red}{Esta fórmula no es la misma que está en Yasui 1997 pero sí es la misma que en el Fujikawa 1980 al que Yasui tmb cita. La diferencia está en un factor $10^3 N_A / M_{H_2O}$. ¿A cuál le hago caso?}
+  \item donde $\alpha_M$ es el coeficiente de acomodación para los procesos de evaporación o condensación, $R_v$ es la constante de los gases ideales para el vapor definido como
+  \item \textcolor{red}{definición}
+  \item , $p_v$ es la presión parcial correspondiente al vapor
+  \item \[p_v = \frac{n_v}{n_{tot}} p_{tot} \]
+  \item con $n_v$ número de partículas de vapor, $n_{tot}$ número total de partículas y $p_{tot}$ presión total dentro de la burbuja. Además, $p_v^*$ es la presión de vapor saturado a la temperatura del líquido en la interfase $T_{L,i}$ y $T_{B,i}$ es la temperatura del gas en la interfase.
+  \item El factor de corrección $\Gamma$ está dado por la siguiente expresión
+  \item \[\Gamma = e^{-\Omega^2} - \Omega \sqrt{\pi} \left ( 1 - \frac{2}{\sqrt{\pi}} \int_0^{\Omega} e^{-x^2} dx \right ) \]
+  \item con \[\Omega = \frac{\dot{m}}{p_v} \sqrt{\frac{R_v T_{B,i}}{2}}\]
+  \item \textcolor{red}{En esta última expresión Gabriela copia al Yasui el cual dice que en $\Omega$ aparece $T$ la temperatura en el interior de la burbuja. Sin embargo, en el Fujikawa 1980 aparece $T_{B,i}$ la temperatura en la interfase. ¿A cuál le hago caso?}
+\end{itemize}
+
+\ptitle{Diferencia entre $T_{B,i}$ y  $T_{L,i}$}
+\begin{itemize}
+  \item Mediante teoría cinética de gases se puede demostrar que el salto de temperatura en la capa superficial de la burbuja es
+  \item \[T_{B,i} - T_{L,i} = \Delta T = -\frac{1}{2 k n'} \sqrt{\frac{\pi \bar{m}}{2 k T_{B,i}}} \frac{2 - a' \alpha_E}{\alpha_E} q''|_{r = R} \]
+  \item donde $k$ es la constante de Boltzmann, $n'$ es la densidad de partículas totales (gas y vapor), $\bar{m}$ es la masa media de una molécula \textcolor{red}{No es clara esta def}, $a' = 0.827$ es una constante que depende del gas \textcolor{red}{verficar referencia} y $q''|_{r = R}/\kappa$ es el gradiente de temperatura del lado interno de la superficie de la burbuja, con $\kappa$ conductividad térmica de la mezcla de gases.
+\end{itemize}
+
+\ptitle{Definición de $p_B$ presión del líquido sobre la superficie externa de la burbuja}
+\begin{itemize}
+  \item La presión del líquido sobre la superficie externa de la burbuja $p_B$ presente en \ref{eq:cap2_R_ecdif} está dada por la expresión
+  \item \[p_B(t) = p_g(t) -\frac{2 \sigma}{R} - \frac{4 \mu}{R} \left ( \dot{R} - \frac{\dot{m}}{\rho_{L,i}} \right ) - \dot{m}^2 \left ( \frac{1}{\rho_{L,i}} - \frac{1}{\rho_g} \right ) \]
+  \item donde $p_g(t)$ es la presión en el interior de la burbuja, $\sigma$, la tensión superficial, $\mu$, la viscosidad del líquido y $\rho_g$, la densidad total en el interior de la burbuja.
+\end{itemize}
+
+\ptitle{Definición de la presión en el interior de la burbuja $p_g$. Ec de estado de Van der Waals.}
+\begin{itemize}
+  \item La presión en el interior de la burbuja $p_g$ se modeló mediante la ecuación de Van der Waals \textcolor{red}{referencia?}
+  \item , válida para un range amplio de temperaturas \textcolor{red}{y presiones?}
+  \item \[p_g(t) = \frac{R_g T}{\nu - b} - \frac{a}{\nu^2}\]
+  \item donde $R_g$ es la constante universal de los gases, $T$ es la temperatura de la mezcla en el interior de la burbuja \textcolor{red}{Esto ya lo dije antes}, $\nu$ es el volumen molar de la mezcla de gases en el interior de la burbuja \textcolor{red}{Buscar qué es esto exactamente. Está referenciado en Yasui 1996} y $a$ y $b$ son las constantes de Van der Waals de la mezcla. Estas constantes están dadas por
+  \item \textcolor{red}{Tengo que buscar cómo es esta expresión porque hay una gran variedad de gases}
+
+  \item Dichas constantes cambian en el tiempo debido a la variación en la cantidad de moléculas de cada especie.
+\end{itemize}
 
 
 \subsubsection{Reacciones químicas}

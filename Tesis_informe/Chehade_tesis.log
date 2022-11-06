@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2022.4.23)  6 NOV 2022 17:18
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2022.4.23)  6 NOV 2022 19:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -737,19 +737,19 @@ Overfull \hbox (421.6151pt too wide) detected at line 486
 ] + [][]
  []
 
-[5]
+[5] [6]
 No file Chehade_tesis.bbl.
-[6] (Chehade_tesis.aux)
+[7] (Chehade_tesis.aux)
 Package rerunfilecheck Info: File `Chehade_tesis.out' has not changed.
 (rerunfilecheck)             Checksum: 66872A30B61C39285C1442213D7E09CA;3393.
  ) 
 Here is how much of TeX's memory you used:
- 16235 strings out of 410944
- 257296 string characters out of 2823429
- 616466 words of memory out of 3000000
- 36788 multiletter control sequences out of 15000+600000
+ 16236 strings out of 410944
+ 257307 string characters out of 2823429
+ 617485 words of memory out of 3000000
+ 36789 multiletter control sequences out of 15000+600000
  479079 words of font info for 71 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,7n,77p,1473b,475s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on Chehade_tesis.pdf (6 pages).
+Output written on Chehade_tesis.pdf (7 pages).
