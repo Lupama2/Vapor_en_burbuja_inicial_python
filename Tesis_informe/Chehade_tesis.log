@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2022.4.23)  6 NOV 2022 10:17
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2022.4.23)  6 NOV 2022 12:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -512,13 +512,13 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip57
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 40.
+Package hyperref Info: Option `colorlinks' set `true' on input line 41.
 
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 40.
+(hyperref)                setting the option has no effect on input line 41.
 
-Package hyperref Info: Option `bookmarksopen' set `false' on input line 40.
+Package hyperref Info: Option `bookmarksopen' set `false' on input line 41.
 \c@para=\count301
 (C:\Users\lupam\AppData\Local\Programs\MiKTeX\tex/latex/footmisc\footmisc.sty
 Package: footmisc 2022/03/08 v6.0d a miscellany of footnote facilities
@@ -536,10 +536,10 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 764
 )
 Excluding 'comment' comment.
 Class revtex4-2 Info: Unrecognized LaTeX tabular. Please update this document c
-lass! (Proceeding with fingers crossed.) on input line 136.
-Class revtex4-2 Info: cite was not loaded (OK!) on input line 136.
-Class revtex4-2 Info: mcite was not loaded (OK!) on input line 136.
-Class revtex4-2 Info: multicol was not loaded (OK!) on input line 136.
+lass! (Proceeding with fingers crossed.) on input line 137.
+Class revtex4-2 Info: cite was not loaded (OK!) on input line 137.
+Class revtex4-2 Info: mcite was not loaded (OK!) on input line 137.
+Class revtex4-2 Info: multicol was not loaded (OK!) on input line 137.
 
 (C:\Users\lupam\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xet
 ex.def
@@ -551,45 +551,42 @@ File: l3backend-xetex.def 2022-04-14 L3 backend support: XeTeX
 \g__pdf_backend_object_int=\count305
 \g__pdf_backend_annotation_int=\count306
 \g__pdf_backend_link_int=\count307
-) (Chehade_tesis.aux
-
-LaTeX Warning: Label `eq:bubston_ec_dif_R' multiply defined.
-
-)
+) (Chehade_tesis.aux)
 \openout1 = `Chehade_tesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 136.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 137.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-36.
- (C:\Users\lupam\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
+37.
+
+(C:\Users\lupam\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Info: Redefining \. on input line 136.
-LaTeX Info: Redefining \% on input line 136.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Info: Redefining \. on input line 137.
+LaTeX Info: Redefining \% on input line 137.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 136.
+Package hyperref Info: Link coloring ON on input line 137.
 
 (C:\Users\lupam\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -603,99 +600,384 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count308
 )
-LaTeX Info: Redefining \ref on input line 136.
-LaTeX Info: Redefining \pageref on input line 136.
-LaTeX Info: Redefining \nameref on input line 136.
+LaTeX Info: Redefining \ref on input line 137.
+LaTeX Info: Redefining \pageref on input line 137.
+LaTeX Info: Redefining \nameref on input line 137.
  (Chehade_tesis.out) (Chehade_tesis.out)
 \@outlinefile=\write5
 \openout5 = `Chehade_tesis.out'.
 
-Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 136.
-\openout3 = `Chehade_tesisNotes.bib'.
 
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 137.
+\openout3 = `Chehade_tesisNotes.bib'.
 
 
 Class revtex4-2 Warning: Assuming \noaffiliation for authors.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 204
+LaTeX Font Info:    Trying to load font information for U+msa on input line 205
 .
 (C:\Users\lupam\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 204
+LaTeX Font Info:    Trying to load font information for U+msb on input line 205
 .
 
 (C:\Users\lupam\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-LaTeX Warning: Command \guillemotleft invalid in math mode on input line 206.
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 207.
 
 Missing character: There is no « in font cmr10!
-[1]
 
-LaTeX Warning: Command \guillemotright invalid in math mode on input line 236.
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 220.
 
 Missing character: There is no » in font cmr10!
+[1]
 
-Underfull \hbox (badness 1028) in paragraph at lines 253--254
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 238.
+
+Missing character: There is no » in font cmr10!
+Runaway argument?
+{\@firstoffive }\fi , se obtiene \begin {equation} \frac {dN_e}{dt} =\ETC.
+c:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python/Tesis
+_informe/Chehade_tesis.tex:252: Paragraph ended before \Hy@setref@link was comp
+lete.
+<to be read again> 
+                   \par 
+l.252 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+Underfull \hbox (badness 1028) in paragraph at lines 255--256
 \TU/lmr/m/n/10 el problema de Debye. Esto se discute en $\OML/cmm/m/it/10 https
  \OT1/cmr/m/n/10 :
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 253--254
+Underfull \hbox (badness 1168) in paragraph at lines 255--256
 \OML/cmm/m/it/10 ==en:wikipedia:org=wiki=Debye[]ength$[] \TU/lmr/m/n/10 y aplic
 ando la
  []
 
+
+Overfull \hbox (54.27533pt too wide) detected at line 286
+[][]\OML/cmm/m/it/10 N[] \OT1/cmr/m/n/10 = 4\OML/cmm/m/it/10 ^^Y [][] r[]n[]\OT
+1/cmr/m/n/10 (\OML/cmm/m/it/10 r\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dr \OT1/cmr/m
+/n/10 = [][]
+ []
+
+Runaway argument?
+{\@firstoffive }\fi  \item En base a lo anterior se puede expresar $n\ETC.
+c:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python/Tesis
+_informe/Chehade_tesis.tex:295: Paragraph ended before \Hy@setref@link was comp
+lete.
+<to be read again> 
+                   \par 
+l.295 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+File: C:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python
+/Tesis_informe/Figures/cap1_Ne_vs_x.pdf Graphic file (type pdf)
+<use C:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python/
+Tesis_informe/Figures/cap1_Ne_vs_x.pdf>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: C:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python
+/Tesis_informe/Figures/cap1_densidad_vs_r_vs_Ne.pdf Graphic file (type pdf)
+<use C:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python/
+Tesis_informe/Figures/cap1_densidad_vs_r_vs_Ne.pdf>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 317.
+
+Missing character: There is no » in font cmr10!
 [2]
-Overfull \hbox (54.27533pt too wide) detected at line 281
-\OML/cmm/m/it/10 N[] \OT1/cmr/m/n/10 = 4\OML/cmm/m/it/10 ^^Y [][] r[]n[]\OT1/cm
-r/m/n/10 (\OML/cmm/m/it/10 r\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dr \OT1/cmr/m/n/1
-0 = [][]
- []
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 320.
 
 
-Underfull \hbox (badness 1502) in paragraph at lines 307--309
- [][]\TU/lmr/m/n/10 Gráfico de la densidad de electrones. Se pueden
- []
+LaTeX Warning: A float is stuck (cannot be placed) on input line 320.
 
 
-Overfull \hbox (112.13445pt too wide) in paragraph at lines 307--309
+Class revtex4-2 Warning: Deferred float stuck during \clearpage processing.
+
+Runaway argument?
+{\@firstoffive }\fi  y referencia, respectivamente \item Juntando amb\ETC.
+c:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python/Tesis
+_informe/Chehade_tesis.tex:330: Paragraph ended before \Hy@setref@link was comp
+lete.
+<to be read again> 
+                   \par 
+l.330 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+Overfull \hbox (123.91444pt too wide) in paragraph at lines 331--332
  \OML/cmm/m/it/10 ==www:tutorialspoint:com=matplotlib=matplotlib[]etting[]icks[
 ]nd[]ick[]abels:htm$[] 
  []
 
 
-LaTeX Warning: Command \guillemotright invalid in math mode on input line 350.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 342.
 
-Missing character: There is no » in font cmr10!
 
-LaTeX Warning: Command \guillemotright invalid in math mode on input line 357.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 342.
 
-Missing character: There is no » in font cmr10!
 
-Underfull \hbox (badness 1655) in paragraph at lines 370--371
- []\TU/lmr/m/n/10 Esto se hizo numéricamente mediante el método
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 342.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 342.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 1.66702pt
+(hyperref)                removed on input line 342.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 342.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 342.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 342.
+
+Runaway argument?
+{\@firstoffive }\fi  se obtiene \item \[N_{e \, max}(t) = \frac {64}{\ETC.
+c:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python/Tesis
+_informe/Chehade_tesis.tex:359: Paragraph ended before \Hy@setref@link was comp
+lete.
+<to be read again> 
+                   \par 
+l.359 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+Overfull \hbox (52.42812pt too wide) detected at line 368
+\OML/cmm/m/it/10 p[] \OT1/cmr/m/n/10 = [] []
  []
 
-[3] [4]
+Runaway argument?
+{\@firstoffive }\fi  se grafica $p_e(R)$. 
+c:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python/Tesis
+_informe/Chehade_tesis.tex:371: Paragraph ended before \Hy@setref@link was comp
+lete.
+<to be read again> 
+                   \par 
+l.371 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+File: C:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python
+/Tesis_informe/Figures/cap1_p_e_vs_R.pdf Graphic file (type pdf)
+<use C:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python/
+Tesis_informe/Figures/cap1_p_e_vs_R.pdf>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 387.
+
+Missing character: There is no » in font cmr10!
+[3]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 394.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 394.
+
+
+Class revtex4-2 Warning: Deferred float stuck during \clearpage processing.
+
+Runaway argument?
+{\@firstoffive }\fi . \item Esto se hizo numéricamente mediante el m\ETC.
+c:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python/Tesis
+_informe/Chehade_tesis.tex:402: Paragraph ended before \Hy@setref@link was comp
+lete.
+<to be read again> 
+                   \par 
+l.402 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+c:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python/Tesis
+_informe/Chehade_tesis.tex:408: LaTeX Error: Too deeply nested.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.408   \item
+              Luego del tiempo de coalescencia se asume que todos los bubsto...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Runaway argument?
+{\@firstoffive }\fi  deja de valer debido a que durante la dinámica \ETC.
+c:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python/Tesis
+_informe/Chehade_tesis.tex:421: Paragraph ended before \Hy@setref@link was comp
+lete.
+<to be read again> 
+                   \par 
+l.421 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+c:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python/Tesis
+_informe/Chehade_tesis.tex:474: LaTeX Error: Too deeply nested.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.474   \item
+              Resumen de los fenómenos que participan en esta parte de la ev...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[4]
+
+c:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python/Tesis
+_informe/Chehade_tesis.tex:492: LaTeX Error: Too deeply nested.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.492   \item
+              Tengo que repasar la tesis de Gabriela y el paper de Yasui par...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 1796) in paragraph at lines 503--504
+ []\TU/lmr/m/n/10 Toegel Phase diagrams for sonoluminescing
+ []
+
+
+c:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python/Tesis
+_informe/Chehade_tesis.tex:508: LaTeX Error: Too deeply nested.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.508   \item
+              Releer la parte de reacciones químicas de la tesis de Gabriela...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python/Tesis
+_informe/Chehade_tesis.tex:515: LaTeX Error: Too deeply nested.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.515   \item
+              Las reacciones químicas dentro de la burbuja son de no equilib...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python/Tesis
+_informe/Chehade_tesis.tex:526: LaTeX Error: Too deeply nested.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.526   \item
+              Mencionar que es un problema del tipo stiff. Explicar brevente...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 No file Chehade_tesis.bbl.
+
+c:/Users/lupam/OneDrive/Escritorio/GitHub/Vapor_en_burbuja_inicial_python/Tesis
+_informe/Chehade_tesis.tex:599: LaTeX Error: \begin{itemize} on input line 393 
+ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.599 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 [5] (Chehade_tesis.aux)
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `Chehade_tesis.out' has not changed.
-(rerunfilecheck)             Checksum: 51EAEE73F6A43B21CD5C95ED861EBE4E;3334.
- ) 
+(rerunfilecheck)             Checksum: 1A039ADC12847B7C4F3B7FD6E60136F1;3301.
+ )
+(\end occurred inside a group at level 4)
+
+### semi simple group (level 4) entered at line 393 (\begingroup)
+### semi simple group (level 3) entered at line 349 (\begingroup)
+### semi simple group (level 2) entered at line 310 (\begingroup)
+### semi simple group (level 1) entered at line 279 (\begingroup)
+### bottom level
+(\end occurred when \ifx on line 420 was incomplete)
+(\end occurred when \ifx on line 394 was incomplete)
+(\end occurred when \ifx on line 369 was incomplete)
+(\end occurred when \ifx on line 350 was incomplete)
+(\end occurred when \ifx on line 320 was incomplete)
+(\end occurred when \ifx on line 288 was incomplete)
+(\end occurred when \ifx on line 246 was incomplete) 
 Here is how much of TeX's memory you used:
- 16161 strings out of 410944
- 253748 string characters out of 2823429
- 615165 words of memory out of 3000000
- 36731 multiletter control sequences out of 15000+600000
- 474139 words of font info for 54 fonts, out of 8000000 for 9000
+ 16240 strings out of 410944
+ 257353 string characters out of 2823429
+ 615849 words of memory out of 3000000
+ 36793 multiletter control sequences out of 15000+600000
+ 479079 words of font info for 71 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 67i,7n,77p,1473b,469s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 67i,7n,77p,1473b,847s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
 Output written on Chehade_tesis.pdf (5 pages).
