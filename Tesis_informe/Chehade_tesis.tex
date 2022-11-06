@@ -1,5 +1,8 @@
 \documentclass[aps,prb,twocolumn,superscriptaddress,floatfix,longbibliography,10pt]{revtex4-2}
 
+% \documentclass[aps,prb,superscriptaddress,floatfix,longbibliography,13pt]{revtex4-2}
+
+
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
@@ -147,6 +150,7 @@ We acknowledge advice from Jessie Zhang and Harry Pirie to produce Fig.\ \ref{fi
 
 \begin{abstract}
   \begin{itemize}
+    \item \textcolor{red}{TEST}
     \item Se estudió numéricamente la expansión de una burbuja de cavitación láser. \textcolor{red}{y la compresión}
     \item La evolución temporal se divide en dos partes, cada una de ellas gobernada por fenómenos físicos distintos.
     \item La primera consta desde la creación de la burbuja hasta la expansión rápida al radio máximo. El fenómeno que creemos ocurre es la interacción del láser con los electrones de burbujas microscópicas (bubston) para dar lugar a una avalancha de electrones impulsora de la expansión (fenómeno electromagnético y fluidodinámico). El fenómeno se debe principalmente a la acción de los electrones y las moléculas ionizadas que rodean exteriormente la burbuja.
@@ -183,9 +187,8 @@ We acknowledge advice from Jessie Zhang and Harry Pirie to produce Fig.\ \ref{fi
 
 \section*{Capítulo I: Evolución hasta el radio máximo}
 
-\ptitle{Resumen del capítulo}
+\ptitle{Resumen del capítulo. En este capítulo se discute el proceso a partir del cual un láser incidente en un medio líquido es capaz de producir una burbuja de cavitación}
 \begin{itemize}
-  \item En este capítulo se discute el proceso a partir del cual un láser incidente en un medio líquido es capaz de producir una burbuja de cavitación
   \item El proceso se desarrolla en \textcolor{red}{Referencia al Bunkin}
   \item Se parte de un medio líquido, en nuestro caso agua deuterada, en el cual se asume existen micro burbujas de gas (bubstons) agrupadas en clusters en la zona focal del haz de luz. 
   \item Se asume que dentro de cada bubston hay inicialmente un electrón libre
@@ -194,16 +197,11 @@ We acknowledge advice from Jessie Zhang and Harry Pirie to produce Fig.\ \ref{fi
   \item Este efecto se denomina SOC
   \item Explicar brevemente qué ocurre luego
   \item Las cuentas se hacen en el sistema CGS
+  \item Contar que el proceso consta de 3 etapas
 
 \end{itemize}
 
-
-
-
-Armo el cuento hasta la coalescencia
-
-
-\subsection{Situación física inicial}
+\ptitle{Situación física inicial}
 \begin{itemize}
   \item Resumen: en esta sección se explica la situación física inicial antes de la incidencia del láser.
   \item Se parte de un medio líquido en el que se encuentran clusters de burbujas estables (bubstons) de radio $R_0$.
@@ -213,104 +211,89 @@ Armo el cuento hasta la coalescencia
   \item Definir R0 en algún lado
 \end{itemize}
 
+
+
 \subsection{Avalancha de electrones dentro de los bubston}
 
-\ptitle{Resumen}
-\begin{itemize}
-  \item En esta sección se explicará el proceso a través del cual aumenta la cantidad de electrones $N_e$ dentro de cada bubston al incidir un láser.
-  \item También se verá que para que ocurra la avalancha es necesario que el haz supere una intensidad mínima $I_0$ \textcolor{red}{dada por qué parámetros? del líquido?}
-  \item Además, se concluirá que en la avalancha no aumenta indefinidamente el número de electrones, sino que se llega a un valor máximo en un tiempo relativamente corto, a partir del cual $N_e$ se mantiene constante.
-\end{itemize}
+En esta sección se explicará el proceso a través del cual aumenta la cantidad de electrones $N_e$ dentro de cada bubston al incidir un láser. Se parte de la hipótesis de que existe al menos un electrón libre en cada uno de ellos. Además, se asume ocurre rápidamente de modo que su radio se mantiene aproximadamente constante. Se encontrará que el aumento de $N_e$ no es indefinido, sino que se alcanza un valor máximo a partir del cual se mantiene constante. También se hallará una condición sobre la intensidad del haz de luz necesaria para que ocurra la avalancha.
+
+\textcolor{red}{La suposición de que el radio se mantiene constante y el proceso ocurre rápidamente es necesaria para, creo, asegurar que solo ocurren 2 fenómenos que contribuyen a la avalancha}
+
 
 \ptitle{La avalancha comienza con un electrón dentro de la burbuja inmerso en el campo electromagnético producido por el láser}
 
-\begin{itemize}
-  \item Se parte de la hipótesis de que existe al menos un electrón libre dentro de cada bubston.
-  \item Al incidir el láser, el electrón interactúa con el campo electromagnético oscilatorio y se acelera.
-  \item En su movimiento choca con las paredes de la burbuja con una frecuencia $\nu_{e w} = \bar{\nu_e}/R_0$ donde $\bar{\nu_e}$ es la velocidad media aritmética de los electrones.
-  \item En cada choque existe una probabilidad de que ionice alguna molécula de la pared, extrayendo un electrón que contribuye a la avalancha, y una probabilidad de que se quede adherido a alguna de ellas, en decrimento de la avalancha.
-  \item El primer caso ocurre con frecuencia $\nu_i = \dot{\mathcal{E}_e}/\Delta$ donde $\dot{\mathcal{E}_e}$ es la velocidad media de aumento de la energía cinética del electrón ${\mathcal{E}_e}$ debido al movimiento caótico. Mientras que $\Delta$ es la energía de ionización de una molécula de la pared. Esta puede ser mucho menor que la energía de ionización de una molécula individual del líquido y se estima en $\sim 6$ eV. \textcolor{red}{Leer la referencia 4 en el Bunkin}. 
-  \item El segundo caso ocurre con frecuencia $\nu_{loss} = (\bar{\nu}_e/R_0) w_{a,e}$ donde $w_{a,e}$ es la probabilidad de adhesión a la pared.
-  \item De este modo, el número de electrones en el tiempo se encuentra determinado por la ecuación
-  \item(a tiempos cortos) (\textcolor{red}{para los que no creció demasiado el radio y se puede asegurar que solo ocurren los dos fenómenos anteriores?})
-  \begin{equation}
-    \frac{dN_e}{dt} = \nu_i N_e - \nu_{loss} N_e
-    \label{eq:dNedt_1}
-  \end{equation}
-  \item A continuación se determinará la relación entre $\nu_i$ y las propiedades del láser.
-\end{itemize} 
+Como se mencionó anteriormente, el proceso comienza con al menos un electrón libre dentro de cada bubston. Al incidir el láser, el electrón interactúa con el campo electromagnético oscilatorio y se acelera. En su movimiento choca con las paredes de la burbuja con una frecuencia $\nu_{e w} = \bar{v_e}/R_0$ donde $\bar{v_e}$ es la velocidad media aritmética de los electrones. En cada choque existe una probabilidad de que ionice alguna molécula de la pared, extrayendo un electrón que contribuye a la avalancha, y una probabilidad de que se quede adherido a alguna de ellas, en decrimento de la avalancha. El primer caso ocurre con frecuencia $\nu_i = \dot{\mathcal{E}_e}/\Delta$ donde $\dot{\mathcal{E}_e}$ es la velocidad media de aumento de la energía cinética del electrón ${\mathcal{E}_e}$ debido al movimiento caótico. Mientras que $\Delta$ es la energía de ionización de una molécula de la pared. Esta puede ser mucho menor que la energía de ionización de una molécula individual del líquido y se estima en $\sim 6$ eV. \textcolor{red}{Bunkin referencia a Grand 1979. El paper ya lo descargué, debería leerlo}. El segundo caso ocurre con frecuencia $\nu_{loss} = (\bar{v}_e/R_0) w_{a,e}$ donde $w_{a,e}$ es la probabilidad de adhesión a la pared. De este modo, el número de electrones en el tiempo se encuentra determinado por la ecuación
+\begin{equation}
+  \frac{dN_e}{dt} = \nu_i N_e - \nu_{loss} N_e.
+  \label{eq:dNedt_1}
+\end{equation}
+
 
 \ptitle{Determinación de la frecuencia de ionización}
-\begin{itemize}
-  \item Asumiendo que el efecto del campo eléctrico es mayor al magnético, la velocidad $\dot{\mathcal{E}_e}$ corresponde a la potencia promedio $\langle P \rangle$ entregada por el haz de luz a un electrón.
-  \item Además, considerando que la amplitud de oscilación del electrón es mucho menor a la longitud de onda del haz, el campo eléctrico se puede considerar uniforme.
-  \item De este modo, este se puede expresar como $E(t) = E_0 \sin{(w t)}$, con $w$ frecuencia del haz y $E_0$ amplitud.
-  \item En base a esto, la posición del electrón está dada clásicamente por la ley de Newton
-  \item $m \dot{v} = -e E(t) -m \nu_{e w} v $
-  \item donde $m$ es la masa del electrón, $v$ su velocidad, $e$ su carga y el término de fricción $m \nu_{e w} v$ representa las colisiones con la pared.
-  \item Para tiempos largos $t \nu_{e w} >> 1$ se puede resolver la ecuación diferencial obteniendo la velocidad
-  \item \[v(t) = \frac{e E_0}{m(\nu_{e w}^2 + w^2)}[w \cos{(t w)} - \nu_{e w} \sin{(t w)}] \]
-  \item en base a la cual se puede calcular la potencia promedio entregada al electrón
-  \item \[\langle P \rangle = \langle - e E(t) v(t) \rangle = \nu_{e w}\frac{e^2 E_0^2}{2 m w^2} = \nu_{e w} \frac{I}{c n_{e \, cr}}\] 
-  \item donde $n_{e \, cr} = mw^2/4 \pi e^2$ es la densidad de electrones crítica e $I = \frac{c}{8 \pi} E_0^2$ es la intensidad del haz.
-  \item De este modo, la frecuencia de ionización se puede expresar como $\nu_i = \frac{\nu_{e w}}{\Delta} \frac{I}{c n_{e \, cr}}$
-\end{itemize}
 
-\ptitle{Determinación del nro de electrones en función del tiempo}
-\begin{itemize}
-  \item Reemplazando la expresión anterior en \ref{eq:dNedt_1}, se obtiene
-  \item 
-  \begin{equation}
-    \frac{dN_e}{dt} = \beta N_e,
-    \label{eq:dNedt_2}
-  \end{equation}
-  \item con
-  \item \[ \beta = \nu_{e w} w_{a,e} \left ( \frac{I}{I_0} - 1 \right ), \]
-  \item donde $I_0 = c n_{e \, cr} \Delta w_{a,e}$ es la intensidad mínima del haz necesaria para que $\beta>0$ y, por lo tanto, se produzca la avalancha de electrones.
-  \item \textcolor{red}{Vale la pena hacer la cuenta con el láser del laboratorio?}
-\end{itemize}
 
-\ptitle{Aumento indefinido de electrones?}
+A continuación se determinará la relación entre $\nu_i$ y las propiedades del láser. Asumiendo que el efecto del campo eléctrico es mayor al magnético, la velocidad $\dot{\mathcal{E}_e}$ corresponde a la potencia promedio $\langle P \rangle$ entregada por el haz de luz a un electrón. Además, considerando que la amplitud de oscilación del electrón es mucho menor a la longitud de onda del haz, el campo eléctrico $E(t)$ se puede considerar uniforme
+\[E(t) = E_0 \sin{(w t)},\]
+con $w$ frecuencia del haz y $E_0$ amplitud. En base a esto, la posición del electrón está dada clásicamente por la ley de Newton
+\[m \dot{v} = -e E(t) -m \nu_{e w} v\]
+donde $m$ es la masa del electrón, $v$ su velocidad, $e$ su carga y el término de fricción $m \nu_{e w} v$ representa las colisiones con la pared. Resolviendo la ecuación diferencial para tiempos largos $t \nu_{e w} >> 1$ se obtiene la velocidad
+\[v(t) = \frac{e E_0}{m(\nu_{e w}^2 + w^2)}[w \cos{(t w)} - \nu_{e w} \sin{(t w)}]. \]
+En base a esta se puede calcular la potencia promedio entregada al electrón 
+\[\langle P \rangle = \langle - e E(t) v(t) \rangle = \nu_{e w}\frac{e^2 E_0^2}{2 m w^2} = \nu_{e w} \frac{I}{c n_{e \, cr}}\]
+donde $n_{e \, cr} = mw^2/4 \pi e^2$ es la densidad de electrones crítica e $I = \frac{c}{8 \pi} E_0^2$ es la intensidad del haz, con $c$ velocidad de la luz. De este modo, la frecuencia de ionización se puede expresar como $\nu_i = \frac{\nu_{e w}}{\Delta} \frac{I}{c n_{e \, cr}}$
 
-\begin{itemize}
-    \item Se logró demostrar que bajo determinadas condiciones del haz de luz, aumenta $N_e$. Debido a esto se forma un gas de electrones dentro de la burbuja con carga $e N_e$ y una esfera de carga uniforme positiva fuera de la burbuja de carga opuesta debido a los iones.
-    \item Sin embargo, $N_e$ no aumenta indefinidamente.
-    \item El análisis anterior vale cuando la densidad media de electrones $\bar{n}_e$ es pequeña y por lo tanto se pueden despreciar las colisiones entre electrones, es decir, el camino libre medio de colisión entre electrones $l_{ee}$ es más grande que el tamaño de la burbuja $R_0$ que se asume que no varía.
-    \item Cuando esto deja de valer, las colisiones de los electrones con la pared comienzan a disminuir, como así también $\nu_{e w}$ y, por lo tanto, el factor $\beta$ en \ref{eq:dNedt_2}.
-    \item En la competencia de ambos procesos se llegaría a un equilibrio en el que la cantidad de electrones no aumenta. El tiempo en el que ocurre este proceso y la cantidad de electrones en el equilibrio $N_{e \, max}$ serán determinadas a continuación.
-\end{itemize}
+\ptitle{Determinación del nro de electrones en el tiempo y planteo de la condición límite}
+
+Una vez calculada la frecuencia de ionización, se está en condiciones de determinar la evolución de $N_e(t)$. Reemplazando la expresión anterior en \ref{eq:dNedt_1}, se obtiene
+\begin{equation}
+  \frac{dN_e}{dt} = \nu_{e w} w_{a,e} \left ( \frac{I}{I_0} - 1 \right ) N_e = \beta N_e,
+  \label{eq:dNedt_2}
+\end{equation}
+donde $I_0 = c n_{e \, cr} \Delta w_{a,e}$ es la intensidad mínima del haz necesaria para que $\beta>0$ y, por lo tanto, se produzca la avalancha de electrones. \textcolor{red}{Vale la pena hacer la cuenta con el láser del laboratorio?}. En caso de producirse, la expresión anterior indica un crecimiento exponencial $N_e(t) = N_e(0) e^{\beta t}$. Sin embargo, esto no puede ocurrir. El análisis anterior vale cuando la densidad media de electrones $\bar{n}_e$ es pequeña y por lo tanto se pueden despreciar las colisiones entre electrones, es decir, el camino libre medio de colisión entre electrones $l_{ee}$ es más grande que el tamaño de la burbuja $R_0$ que se asume que no varía. Cuando esto deja de valer, las colisiones de los electrones con la pared comienzan a disminuir, como así también $\nu_{e w}$ y, por lo tanto, el factor $\beta$ en \ref{eq:dNedt_2}. En la competencia de ambos procesos se llegaría a un equilibrio en el que la cantidad de electrones no aumenta. Para determinar tal número máximo de electrones $N_{e, max}$ es necesario conocer la densidad de electrones dentro del bubston.
 
 \ptitle{Cálculo de la densidad media máxima}
 
+A continuación se calculará la distribución de la densidad de electrones $n_e(r)$ dentro de un bubston. Asumiendo la validez de la distribución de Boltzmann \textcolor{red}{y qué otras hipótesis??. Este problema se conoce como el problema de Debye. Esto se discute en $https://en.wikipedia.org/wiki/Debye_length$} y aplicando la ecuación de Poisson, esta densidad es solución del sistema de ecuaciones diferenciales
+\[
+\left\{\begin{matrix}
+  n_e(r) = n_e(0)e^{e \phi / T_e}, 0 \leq r \leq R_0 \\
+  \triangledown^2 \phi = 4 \pi e n_e(r)
+\end{matrix}\right.
+\]
+donde $\phi(r)$ es el potencial producido por la densidad de carga y $T_e$ es la temperatura del gas de electrones. Realizando la aproximación $e^{e \phi / T_e} \approx 1 + e \phi/T_e$
+se logra despejar la ecuación diferencial para el potencial
+\[\triangledown^2 \phi - \phi/a_e^2 = 4 \pi e n_e(0) \]
+donde $a_e = \sqrt{T_e/4\pi e^2 n_e(0)}$ es el \textcolor{red}{electron Debye radius. Es lo mismo que el radio de Debye en un plasma?}. Imponiendo la condición de borde $\phi(0) = 0$ se obtiene la solución
+\begin{equation}
+  \phi(r) = \frac{T_e}{e} \left ( \frac{\sinh{r/a_e}}{r/a_e} - 1   \right ),
+  \label{eq:cap1_phi}
+\end{equation}
+y la distribución de electrones
+\begin{equation}
+  n_e(r) = n_e(0) \frac{\sinh{r/a_e}}{r/a_e}
+  \label{eq:cap1_ne}
+\end{equation}
+
+
+\ptitle{Cálculo de las ctes de la expresión de la densidad máxima y de $N_e$ y }
+
 \begin{itemize}
-  \item Para determinar $N_{e, max}$ es necesario conocer la densidad de electrones $n_e$ dentro del bubston.
-  \item Asumiendo la validez de la distribución de Boltzmann \textcolor{red}{y qué otras hipótesis??} y aplicando la ecuación de Poisson, esta densidad es solución del sistema de ecuaciones diferenciales
-  \[
-  \left\{\begin{matrix}
-    n_e(r) = n_e(0)e^{e \phi / T_e}, 0 \leq r \leq R_0 \\
-    \triangledown^2 \phi = 4 \pi e n_e(r)
-  \end{matrix}\right.
-  \]
-  \item donde $\phi$ es el potencial producido por la densidad de carga y $T_e$ es la temperatura del gas de electrones.
-  \item \textcolor{red}{Por qué el $3/2$?? Sacar el 3/2}
-  \item Realizando la aproximación
-  \[e^{e \phi / T_e} \approx 1 + e \phi/T_e \]
-  se logra despejar la ecuación diferencial para el potencial
-  \[\triangledown^2 \phi - \phi/a_e^2 = 4 \pi e n_e(0) \]
-  donde
-  $a_e = \sqrt{T_e/4\pi e^2 n_e(0)}$
-  es el \textcolor{red}{electron Debye radius. Es lo mismo que el radio de Debye en un plasma?}
+  \item A partir de la definición de $a_e$ se obtiene una expresión para $n_e(0)$
+  \item Solo falta calcular $a_e$
+  \item Esto se puede hacer a partir de la relación
+  \item \[N_e = 4 \pi \int_0^{R_0} r^2 n_e(r) dr \]
+  \item 
+\end{itemize}
 
-  \item Imponiendo $\phi(0) = 0$ se obtiene la solución
-  \item \[\phi(r) = \frac{T_e}{e} \left ( \frac{\sinh{r/a_e}}{r/a_e} - 1   \right ), \, 0 \leq r \leq R_0 \]
-  \item y la distribución de electrones
-  \item \[n_e(r) = n_e(0) \frac{\sinh{r/a_e}}{r/a_e} \]
-  \item \textcolor{red}{Corroborar las expresiones! La definición de $a_e$ es distinta que en el paper}
-  \item \textcolor{red}{Este problema se conoce como el problema de Debye. Esto se discute en $https://en.wikipedia.org/wiki/Debye_length$}
 
+\begin{itemize}
   \item \textcolor{blue}{Gráfico de la densidad de electrones. Se pueden poner letras como ticklabels en matplotlib $https://www.tutorialspoint.com/matplotlib/matplotlib_setting_ticks_and_tick_labels.htm$}
   \item 
   \item Relación entre $n_e(R_0)$ y $\bar{n_e}$.
+\end{itemize}
+
+\ptitle{Cálculo de $\bar{n}_{e \, max}$ y $N_{e \, max}$}
+\begin{itemize}
   \item La densidad máxima se alcanza en la condición límite $l_{ee} = a_e$, obteniendo el valor máximo de la densidad y, por lo tanto, de la cantidad de electrones.
   
   \item Explicar en algún lado la la formación de la capa superficial y su justificación a partir del camino libre medio
