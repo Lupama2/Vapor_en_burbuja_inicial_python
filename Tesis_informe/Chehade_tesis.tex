@@ -1,4 +1,4 @@
-\documentclass[aps,prb,twocolumn,superscriptaddress,floatfix,longbibliography,10pt]{revtex4-2}
+\documentclass[aps,prb,onecolumn,superscriptaddress,floatfix,longbibliography,10pt]{revtex4-2}
 % \documentclass[aps,prb,onecolumn,superscriptaddress,floatfix,longbibliography,10pt]{revtex4-2}
 
 \usepackage[utf8]{inputenc}
@@ -632,19 +632,35 @@ Armo el cuento desde la coalesciancia hasta llegar a los resultados importantes 
 
 
 \begin{table}[]
+  \centering
   \begin{tabular}{llllllllll}
-  j & Reacción & $t_j$ & $k_{f,j}$ &  &  &  &  &  &  \\
-    &          &       &           &  &  &  &  &  &  \\
-    &          &       &           &  &  &  &  &  &  \\
-    &          &       &           &  &  &  &  &  &  \\
-    &          &       &           &  &  &  &  &  &  \\
-    &          &       &           &  &  &  &  &  &  \\
-    &          &       &           &  &  &  &  &  &  \\
-    &          &       &           &  &  &  &  &  & 
-  \end{tabular}
+    \hline
+    \multicolumn{1}{|l|}{j} &
+    \multicolumn{1}{l|}{Reacción} &
+    \multicolumn{1}{l|}{$t_j$} &
+    \multicolumn{1}{l|}{$k_{f,j}$} &
+    \multicolumn{1}{l|}{$c_{f,j}$} &
+    \multicolumn{1}{l|}{$E_{f,j}/k$} &
+    \multicolumn{1}{l|}{$k_{b,j}$} &
+    \multicolumn{1}{l|}{$c_{b,j}$} &
+    \multicolumn{1}{l|}{$E_{b,j}/k$} &
+    \multicolumn{1}{l|}{$\Delta E_j$} \\ \hline
+  1  & $\mathrm{O + O + M \leftrightarrow O_2 + M} $ &1      &1.2e17           &-1  &0  &3.16e19  &-1.3 &59893  & 498 \\
+  2  & $\mathrm{O + H + M  \leftrightarrow OH + M} $ &1      &5e17           &-1  &0  &3.54e17  &-0.9  &51217 & 428\\
+  3  & $\mathrm{O + H_2  \leftrightarrow H + OH} $ &0       &3.87e4           &2.7  &3150  &1.79e4  &2.7  &2200  &-8  \\
+  4  & $\mathrm{H + O_2  \leftrightarrow O + OH} $ &0       &2.65e16           &-0.7  &8576  &9e13  &-0.3  &-83  &-70  \\
+  5  & $\mathrm{H + H + M  \leftrightarrow H_2 + M} $ &1       &1e18           & -1  &0  &7.46e17  &-0.8  &52177 &436 \\
+  6  & $\mathrm{H + OH + M  \leftrightarrow H_2O + M} $ &1       &2.2e22           &-2  &0  &3.67e23  &-2  &59980  &498  \\
+  7  & $\mathrm{ OH + H_2  \leftrightarrow H + H_2O} $ &0       &2.16e8           &1.5  &1726  &5.2e9  &1.3  &9529  &62  \\
+  8  & $\mathrm{ OH + OH \leftrightarrow O + H_2O} $ &0       &3.57e4           &2.4  &1062  &1.74e6  &2.2  &7693  &70 \\
+  9  & $\mathrm{HO_2 + HO_2 \leftrightarrow H_2O_2 + O_2}$ & 0      &3.0e12           &0  &-700  &4.53e14  &-0.39  & -19700 & \textcolor{red}{??} \\
+  10  & $\mathrm{H_2O_2 + M \leftrightarrow OH + OH + M}$ & 1      &1.2e17           &0  &-22900  &9.0e5  &0.9  & 3050 & \textcolor{red}{??} \\
+  11  & $\mathrm{H_2O_2 + H \leftrightarrow H_2O + OH}$ & 0      &3.2e14           &0  &-4510  &1.14e9  &1.36  & -38180 & \textcolor{red}{??} \\
+  12  & $\mathrm{H_2O_2 + H \leftrightarrow H_2 + HO_2}$ & 0      &4.82e13           &0  &-4000  &1.41e11  &0.66  & -12320  & \textcolor{red}{??} \\
+  13  & $\mathrm{H_2O_2 + O \leftrightarrow OH + HO_2}$ & 0      &9.55e6           &2  &-2000  &4.62e3  &2.75  & -9277 & \textcolor{red}{??} \\
+  14  & $\mathrm{H_2O_2 + OH \leftrightarrow H_2O + HO_2}$ & 0      &1.0e13           &0  &-900  &2.8e13  &0  & -16500 & \textcolor{red}{??} \\ \hline
+\end{tabular}
 \end{table}
-
-
 
 
 
