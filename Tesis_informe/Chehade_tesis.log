@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2022.4.23)  8 NOV 2022 12:01
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2022.4.23)  8 NOV 2022 12:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -614,6 +614,10 @@ Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 137.
 
 Class revtex4-2 Warning: Assuming \noaffiliation for authors.
 
+
+Package natbib Warning: Citation `Bunkin1993' on page 1 undefined on input line
+ 190.
+
 LaTeX Font Info:    Trying to load font information for U+msa on input line 205
 .
 (C:\Users\lupam\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -749,6 +753,9 @@ Overfull \hbox (106.24066pt too wide) in paragraph at lines 649--676
 
 [7]
 No file Chehade_tesis.bbl.
+
+Package natbib Warning: There were undefined citations.
+
 [8] (Chehade_tesis.aux)
 Package rerunfilecheck Info: File `Chehade_tesis.out' has not changed.
 (rerunfilecheck)             Checksum: 580FF7FEB0FF93F3BA6A9517A6C88569;5008.
