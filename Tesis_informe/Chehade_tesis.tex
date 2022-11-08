@@ -1,4 +1,4 @@
-\documentclass[aps,prb,onecolumn,superscriptaddress,floatfix,longbibliography,10pt]{revtex4-2}
+\documentclass[aps,prb,twocolumn,superscriptaddress,floatfix,longbibliography,10pt]{revtex4-2}
 % \documentclass[aps,prb,onecolumn,superscriptaddress,floatfix,longbibliography,10pt]{revtex4-2}
 
 \usepackage[utf8]{inputenc}
@@ -183,7 +183,7 @@ We acknowledge advice from Jessie Zhang and Harry Pirie to produce Fig.\ \ref{fi
 
 
 
-\section*{Capítulo I: Evolución hasta el radio máximo}
+\section{Capítulo I: Evolución hasta el radio máximo}
 
 \ptitle{Resumen del capítulo. En este capítulo se discute el proceso a partir del cual un láser incidente en un medio líquido es capaz de producir una burbuja de cavitación}
 \begin{itemize}
@@ -436,6 +436,11 @@ Armo el cuento desde la coalesciancia hasta llegar a los resultados importantes 
 \end{itemize}
 
 
+\subsection{Ionización y calentamiento de las moléculas}
+La idea es explicar de forma muy resumida lo que dice en el Bunkin y referenciar directamente
+
+\subsection{Evaporación del líquido en la pared de la burbuja}
+La idea es explicar de forma muy resumida lo que dice en el Bunkin y referenciar directamente
 
 
 
@@ -460,11 +465,7 @@ Armo el cuento desde la coalesciancia hasta llegar a los resultados importantes 
 
 
 
-
-
-
-
-\section*{Capítulo II: Evolución desde el radio máximo}
+\section{Capítulo II: Evolución desde el radio máximo}
 
 \subsection{Resumen del capítulo}
 
@@ -476,6 +477,26 @@ Armo el cuento desde la coalesciancia hasta llegar a los resultados importantes 
   \item Estos son la compresibilidad y viscosidad del medio líquido que rode a la burbuja, la transferencia de calor, la transferencia de masa debido a condensación y evaporación del vapor, la difusión de las partículas de vapor y la variación del número de partículas de distintas especies debido a reacciones químicas.
   \item El objetivo es calcular la evolución del radio $R(t)$ de la burbuja
 \end{itemize}
+
+
+\ptitle{¿Dónde se considerará cada fenómeno?}
+\begin{itemize}
+  \item ¿Dónde serán tenidos en cuenta los fenómenos físicos comentados anteriormente?
+  \item La compresibilidad y viscodidad del medio líquido fueron tenidas en cuenta en la ecuación de $R(t)$
+  \item Para calcular $\dot{m}$ es necesario considerar la evaporación y condensación en las paredes de la burbuja, así como la transferencia de calor.
+  \item Para calcular $p_B$ se necesita una ecuación de estado del gas interno
+  \item Para calcular $\frac{dp_B}{dt}$ se necesita conocer cómo varía el número de partículas de cada especie dentro de la burbuja a través de reacciones químicas y, para el caso particular de gases condensables, se necesitan considerar difusión. Además, se ncesita conocer cómo varía la temperatura de la burbuja, necesitando una ecuación para la conservación de la energía
+\end{itemize}
+
+
+
+
+
+
+\subsection{Fenómenos físicos}
+
+\subsubsection{Dinámica de la burbuja}
+
 
 \ptitle{Ecuación diferencial para $R(t)$}
 \begin{itemize}
@@ -489,21 +510,29 @@ Armo el cuento desde la coalesciancia hasta llegar a los resultados importantes 
 \end{itemize}
 
 
-\ptitle{¿Dónde se considerará cada fenómeno?}
+
+\subsubsection{Presión del gas y ecuación de estado}
+
+\ptitle{Definición de $p_B$ presión del líquido sobre la superficie externa de la burbuja}
 \begin{itemize}
-  \item ¿Dónde serán tenidos en cuenta los fenómenos físicos comentados anteriormente?
-  \item La compresibilidad y viscodidad del medio líquido fueron tenidas en cuenta en la ecuación de $R(t)$
-  \item Para calcular $\dot{m}$ es necesario considerar la evaporación y condensación en las paredes de la burbuja, así como la transferencia de calor.
-  \item Para calcular $p_B$ se necesita una ecuación de estado del gas interno
-  \item Para calcular $\frac{dp_B}{dt}$ se necesita conocer cómo varía el número de partículas de cada especie dentro de la burbuja a través de reacciones químicas y, para el caso particular de gases condensables, se necesitan considerar difusión. Además, se ncesita conocer cómo varía la temperatura de la burbuja, necesitando una ecuación para la conservación de la energía
+  \item La presión del líquido sobre la superficie externa de la burbuja $p_B$ presente en \ref{eq:cap2_R_ecdif} está dada por la expresión
+  \item \[p_B(t) = p_g(t) -\frac{2 \sigma}{R} - \frac{4 \mu}{R} \left ( \dot{R} - \frac{\dot{m}}{\rho_{L,i}} \right ) - \dot{m}^2 \left ( \frac{1}{\rho_{L,i}} - \frac{1}{\rho_g} \right ) \]
+  \item donde $p_g(t)$ es la presión en el interior de la burbuja, $\sigma$, la tensión superficial, $\mu$, la viscosidad del líquido y $\rho_g$, la densidad total en el interior de la burbuja.
 \end{itemize}
 
-\ptitle{¿Qué fenómenos se implementaron en este trabajo?}
+\ptitle{Definición de la presión en el interior de la burbuja $p_g$. Ec de estado de Van der Waals.}
 \begin{itemize}
-  \item Comentar que en este trabajo se logró implementar el código de reacciones y de condensación/evaporación.
-  \item Comentar qué modelo se considera para la presión de los gases dentro de la burbuja y qué modelo para la energía
-  \item Comentar que se trata de un problema del tipo stiff y deberá ser trabajado con cuidado. No definir problemas stiff, eso conviene hacerlo en otra sección.
+  \item La presión en el interior de la burbuja $p_g$ se modeló mediante la ecuación de Van der Waals \textcolor{red}{referencia?}
+  \item , válida para un range amplio de temperaturas \textcolor{red}{y presiones?}
+  \item \[p_g(t) = \frac{R_g T}{\nu - b} - \frac{a}{\nu^2}\]
+  \item donde $R_g$ es la constante universal de los gases, $T$ es la temperatura de la mezcla en el interior de la burbuja \textcolor{red}{Esto ya lo dije antes}, $\nu$ es el volumen molar de la mezcla de gases en el interior de la burbuja \textcolor{red}{Buscar qué es esto exactamente. Está referenciado en Yasui 1996} y $a$ y $b$ son las constantes de Van der Waals de la mezcla. Estas constantes están dadas por
+  \item \[a = a_{H_2O}, b = b_{H_2O} \]
+  siempre que las partículas predominantes sean de agua
+  \item Dichas constantes cambian en el tiempo debido a la variación en la cantidad de moléculas de cada especie.
 \end{itemize}
+
+
+\subsubsection{Transferencia de calor}
 
 \ptitle{Descripción física del problema}
 \begin{itemize}
@@ -515,7 +544,21 @@ Armo el cuento desde la coalesciancia hasta llegar a los resultados importantes 
 \end{itemize}
 
 
-\subsection{Fenómenos físicos}
+\ptitle{Diferencia entre $T_{B,i}$ y  $T_{L,i}$}
+\begin{itemize}
+  \item Mediante teoría cinética de gases se puede demostrar que el salto de temperatura en la capa superficial de la burbuja es
+  \item \[T_{B,i} - T_{L,i} = \Delta T = -\frac{1}{2 k n'} \sqrt{\frac{\pi \bar{m}}{2 k T_{B,i}}} \frac{2 - a' \alpha_E}{\alpha_E} q''|_{r = R} \]
+  \item donde $k$ es la constante de Boltzmann, $n'$ es la densidad de partículas totales (gas y vapor), $\bar{m}$ es la masa media de una molécula \textcolor{red}{No es clara esta def}, $a' = 0.827$ es una constante que depende del gas \textcolor{red}{verficar referencia} y $q''|_{r = R}/\kappa$ es el gradiente de temperatura del lado interno de la superficie de la burbuja, con $\kappa$ conductividad térmica de la mezcla de gases.
+\end{itemize}
+
+\ptitle{Expresión de $q''$. Modelo de Toegel}
+\begin{itemize}
+  \item \textcolor{red}{La expresión de la tesis de Gabriela según el modelo de Toegel (2.2.9.2.1) es distinta de la del modelo de Toegel en sí (Toegel 2000)}
+  \item \textcolor{red}{Rta de Fabián: me tengo que fijar cuál usó Gabriela en su código y usar esa}
+
+\end{itemize}
+
+
 
 \subsubsection{Condensación y Evaporación}
 
@@ -541,44 +584,14 @@ Armo el cuento desde la coalesciancia hasta llegar a los resultados importantes 
   \item \[\Gamma = e^{-\Omega^2} - \Omega \sqrt{\pi} \left ( 1 - \frac{2}{\sqrt{\pi}} \int_0^{\Omega} e^{-x^2} dx \right ) \]
   \item con \[\Omega = \frac{\dot{m}}{p_v} \sqrt{\frac{R_v T_{B,i}}{2}}\]
   \item \textcolor{red}{En esta última expresión Gabriela copia al Yasui el cual dice que en $\Omega$ aparece $T$ la temperatura en el interior de la burbuja. Sin embargo, en el Fujikawa 1980 aparece $T_{B,i}$ la temperatura en la interfase. ¿A cuál le hago caso?}
+  \item \textcolor{red}{Rta de Fabián: Fórmulas de mp: usar la de Gabriela, referenciar al paper que sea correcto}
 \end{itemize}
 
-\subsubsection{Presión y ecuación de estado}
 
-\ptitle{Definición de $p_B$ presión del líquido sobre la superficie externa de la burbuja}
-\begin{itemize}
-  \item La presión del líquido sobre la superficie externa de la burbuja $p_B$ presente en \ref{eq:cap2_R_ecdif} está dada por la expresión
-  \item \[p_B(t) = p_g(t) -\frac{2 \sigma}{R} - \frac{4 \mu}{R} \left ( \dot{R} - \frac{\dot{m}}{\rho_{L,i}} \right ) - \dot{m}^2 \left ( \frac{1}{\rho_{L,i}} - \frac{1}{\rho_g} \right ) \]
-  \item donde $p_g(t)$ es la presión en el interior de la burbuja, $\sigma$, la tensión superficial, $\mu$, la viscosidad del líquido y $\rho_g$, la densidad total en el interior de la burbuja.
-\end{itemize}
+\subsubsection{Difusión a través de la pared}
+\textcolor{red}{Todavía no lo leí. En caso de agregarlo al informe tendría que hacerlo aquí}
 
-\ptitle{Definición de la presión en el interior de la burbuja $p_g$. Ec de estado de Van der Waals.}
-\begin{itemize}
-  \item La presión en el interior de la burbuja $p_g$ se modeló mediante la ecuación de Van der Waals \textcolor{red}{referencia?}
-  \item , válida para un range amplio de temperaturas \textcolor{red}{y presiones?}
-  \item \[p_g(t) = \frac{R_g T}{\nu - b} - \frac{a}{\nu^2}\]
-  \item donde $R_g$ es la constante universal de los gases, $T$ es la temperatura de la mezcla en el interior de la burbuja \textcolor{red}{Esto ya lo dije antes}, $\nu$ es el volumen molar de la mezcla de gases en el interior de la burbuja \textcolor{red}{Buscar qué es esto exactamente. Está referenciado en Yasui 1996} y $a$ y $b$ son las constantes de Van der Waals de la mezcla. Estas constantes están dadas por
-  \item \[a = a_{H_2O}, b = b_{H_2O} \]
-  \item \textcolor{red}{La fórmula anterior no es la de Gabriela}
-  \item \textcolor{red}{Uso el modelo de Van der Waals usando combinaciones lineales de las ctes. Esto se justifica en Beattie 1930. No se hace exactamente una combinación lineal de las constantes pesadas por las fracciones molares, es algo un poco más complicado. En Beattie 1930 también se mencionan otros modelos "actuales" que sirven para mezclas de gases. En Yasui 1997 se usa la misma fórmula que Gabriela considerando Argón y no se toman más gases bajo el justificativo de que "el efecto de los productos químicos en las ctes de van der Waals se desprecia debido a que la cantidad de productos químicos es pequeña. Toegel 2003 usa otro modelo similar al de Van Der Waals}
-  \item \textcolor{red}{Tengo que buscar cómo es esta expresión porque hay una gran variedad de gases}
-  \item Dichas constantes cambian en el tiempo debido a la variación en la cantidad de moléculas de cada especie.
-\end{itemize}
 
-\subsubsection{Transferencia de calor}
-
-\ptitle{Diferencia entre $T_{B,i}$ y  $T_{L,i}$}
-\begin{itemize}
-  \item Mediante teoría cinética de gases se puede demostrar que el salto de temperatura en la capa superficial de la burbuja es
-  \item \[T_{B,i} - T_{L,i} = \Delta T = -\frac{1}{2 k n'} \sqrt{\frac{\pi \bar{m}}{2 k T_{B,i}}} \frac{2 - a' \alpha_E}{\alpha_E} q''|_{r = R} \]
-  \item donde $k$ es la constante de Boltzmann, $n'$ es la densidad de partículas totales (gas y vapor), $\bar{m}$ es la masa media de una molécula \textcolor{red}{No es clara esta def}, $a' = 0.827$ es una constante que depende del gas \textcolor{red}{verficar referencia} y $q''|_{r = R}/\kappa$ es el gradiente de temperatura del lado interno de la superficie de la burbuja, con $\kappa$ conductividad térmica de la mezcla de gases.
-\end{itemize}
-
-\ptitle{Expresión de $q''$. Modelo de Toegel}
-\begin{itemize}
-  \item \textcolor{red}{La expresión de la tesis de Gabriela según el modelo de Toegel (2.2.9.2.1) es distinta de la del modelo de Toegel en sí (Toegel 2000)}
-
-\end{itemize}
 
 \subsubsection{Reacciones químicas}
 
@@ -635,16 +648,16 @@ Armo el cuento desde la coalesciancia hasta llegar a los resultados importantes 
   \centering
   \begin{tabular}{llllllllll}
     \hline
-    \multicolumn{1}{|l|}{j} &
-    \multicolumn{1}{l|}{Reacción} &
-    \multicolumn{1}{l|}{$t_j$} &
-    \multicolumn{1}{l|}{$k_{f,j}$} &
-    \multicolumn{1}{l|}{$c_{f,j}$} &
-    \multicolumn{1}{l|}{$E_{f,j}/k$} &
-    \multicolumn{1}{l|}{$k_{b,j}$} &
-    \multicolumn{1}{l|}{$c_{b,j}$} &
-    \multicolumn{1}{l|}{$E_{b,j}/k$} &
-    \multicolumn{1}{l|}{$\Delta E_j$} \\ \hline
+    \multicolumn{1}{|l}{j \quad} &
+    \multicolumn{1}{l}{Reacción} &
+    \multicolumn{1}{l}{$t_j$ \quad} &
+    \multicolumn{1}{l}{$k_{f,j}$ \quad} &
+    \multicolumn{1}{l}{$c_{f,j}$ \quad} &
+    \multicolumn{1}{l}{$E_{f,j}/k$ \quad} &
+    \multicolumn{1}{l}{$k_{b,j}$ \quad} &
+    \multicolumn{1}{l}{$c_{b,j}$ \quad} &
+    \multicolumn{1}{l}{$E_{b,j}/k$ \quad} &
+    \multicolumn{1}{l|}{$\Delta E_j$ \quad} \\ \hline
   1  & $\mathrm{O + O + M \leftrightarrow O_2 + M} $ &1      &1.2e17           &-1  &0  &3.16e19  &-1.3 &59893  & 498 \\
   2  & $\mathrm{O + H + M  \leftrightarrow OH + M} $ &1      &5e17           &-1  &0  &3.54e17  &-0.9  &51217 & 428\\
   3  & $\mathrm{O + H_2  \leftrightarrow H + OH} $ &0       &3.87e4           &2.7  &3150  &1.79e4  &2.7  &2200  &-8  \\
@@ -663,11 +676,6 @@ Armo el cuento desde la coalesciancia hasta llegar a los resultados importantes 
 \end{table}
 
 
-
-
-
-
-
 Gabriela obtuvo el modelo de reacciones qcas del paper de Yasui 1997. \textcolor{red}{Podría verificar si no hay un mejor modelo}.
 Yasui escribió un libro sobre burbujas. Quicás sea útil leerlo. Mi principal foco estaría en el capítulo 2. Se desarrollan no solo las reacciones químicas sino también los demás fenómenos.
 
@@ -682,18 +690,61 @@ Toegel Phase diagrams for sonoluminescing bubbles: A comparison between experime
 \end{itemize}
 
 
+\subsubsection{Balance de energía}
+\textcolor{red}{Aún no lo entendí. Se describe una ecuación de balance de energía para calcular $dT/dt$, necesaria para calcular $dp_B/dt$}
 
 
 
 \subsection{Método numérico}
 
+\ptitle{Este es un problema de valores iniciales}
 \begin{itemize}
-  \item Mencionar que es un problema del tipo stiff. Explicar brevente de qué se trata esto
-  \item Historia de cómo el código pasó de ejecutar en días (el mío) o minutos (el de Gabriela) a segundos (el mío):
-  \item Comentar que ya se contaba con un código en C++ programado en Borland por Gabriela (y en qué año), pero que resolvía el sistema de ecuaciones diferenciales usando Runge-Kutta Ferhber \textcolor{red}{corroborar cómo se escribía}. Comentar qué complicaciones tenía y que se progrmó toro código en C++
-  \item Se usó el cluster.
-  \item Se optó por python. Se usó la librería scipy. Nuevamente el código era muy lento con RK45 pero con el método de Radau todo mejoró. \textcolor{red}{Explico esto?}
+  \item Se tiene un sistema de ecuaciones diferenciales acopladas
+  \item donde las variables son 
+  \item No hay dependencia explícita en la posición
+  \item Las condiciones iniciales son?
 \end{itemize}
+
+\ptitle{El código propuesto en la tesis de Gabriela resuelve el problema usando un RK45}
+\begin{itemize}
+  \item Mencionar que la solución numérica fue implementada en C++ en la tesis de Gabriela en Borland...
+  \item Su problema es más gral. Ella trabajó en sonoluminiscencia y cavitación en burbujas haciendo un análisis dinámico y de estabilidad
+  \item Como método de evolución temporal empleó un RK45 \textcolor{red}{Referencia para no explicarlo}
+  \item Le tomaba correr aproximadamente 10 min \textcolor{red}{Menciono qué compu usé para correrlo?}
+\end{itemize}
+
+\ptitle{Se intentó emplear su código. Hubo problemas}
+\begin{itemize}
+  \item Mencionar que no corre con los compiladores actuales públicos (g++)
+  \item Se intentó implementar una versión que corra con los nuevos compiladores pero no fue satisfactorio. Hubo problemas relacionados con error handling internos de Borland que no están directamente implementados en los compiladores públicos.
+  \item Se creó un nuevo código en C++ que además de tardar más tiempo en correr (aproximadamente días) no convergía. Se intentó corregirlo pero no se logró.
+  \item Se empleó el mismo método numérico que Gabriela
+  \item Se optó por usar el clúster de Mecom, lo cual mejoraba el tiempo de cómputo pero no se pudo resolver el problema de la convergencia
+\end{itemize}
+
+
+\ptitle{Este problema pertenece a la categoría de problemas stiff}
+\begin{itemize}
+  \item Por qué?
+  \item Mencionar que es un problema del tipo stiff. Explicar brevente de qué se trata esto
+  \item Referenciar algún libro
+\end{itemize}
+
+\ptitle{Métodos numéricos para problemas stiff}
+\begin{itemize}
+  \item Existen métodos numéricos para problemas stiff
+  \item Tal es el caso del método Radau \textcolor{red}{Referenciar}
+  \item Explicar brevemente
+\end{itemize}
+
+\ptitle{¿Qué fenómenos se implementaron en este trabajo?}
+\begin{itemize}
+  \item Comentar que en este trabajo se logró implementar el código de reacciones y de condensación/evaporación.
+  \item Se implementó en python. Se usó la librería scipy.
+  \item Comentar los tiempos característicos
+  \item Aún falta avanzar agregando más fenómenos físicos
+\end{itemize}
+
 
 
 
